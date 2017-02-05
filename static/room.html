@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- <link rel="icon" href="../../favicon.ico"> -->
+
+	<title>Chatting Room</title>
+
+	<link href="./css/room.css" rel="stylesheet">
+	<link href="./css/chatty.css" rel="stylesheet">
+	<link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="return">
+				<a href="#">Back</a>
+			</div>
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">WestWorld</a>
+			</div>
+		</div>
+	</nav>
+	<div class = "container">
+		<div class = "emptyspace">
+		</div>
+	</div><!-- /.container -->
+	<div class="chat-content panel-left">
+		<div id="chat-messages-inner">
+			<p id="msg-1" class="user-neytiri" style="display: block;">
+				<img src="" alt="">
+				<span class="msg-block">
+					<strong>Neytiri</strong>
+					<span class="time">- 16:56</span>
+					<span class="msg">I have a problem. My computer not work!</span>
+				</span>
+			</p>
+			<p id="msg-2" class="user-you" style="display: block;">
+					<img src="" alt="">
+					<span class="msg-block"><strong>You</strong>
+						<span class="time">- 16:56</span>
+						<span class="msg">Great!!!</span>
+					</span>
+			</p>
+		</div>
+		<div class="chat-message sendBox navbar-fixed-bottom">
+			<button class="btn btn-success">Send</button>
+			<span class="input-box">
+				<input type="text" name="msg-box" id="msg-box">
+			</span>
+		</div>
+	</div><!-- /.chat-content -->
+
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="./vendor/jquery.min.js"><\/script>')</script>
+	<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+  <!-- <script src="./room/jquery.min.js"></script> -->
+  <!-- <script src="./room/jquery.ui.custom.js"></script> -->
+  <!-- <script src="./room/unicorn.js"></script> -->
+  <!-- <script src="./room/unicorn.chat.js"></script> -->
+</body>
+</html>
