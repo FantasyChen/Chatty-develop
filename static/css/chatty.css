@@ -28,9 +28,10 @@ body {
   /*padding: 2rem 15px;*/
   margin-left: 2rem;
   margin-right: 2rem;
-  background-color: #f8f8f8;
-  text-align: center;
+  background-color: #f9f9f9;
+  /*text-align: center;*/
   box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.7rem;
 }
 .program-img {
   width: 100%;
@@ -39,17 +40,44 @@ body {
   margin-left: 0;
   margin-right: 0;
 }
-.description {
-  width: 100%;
+.container-custom .chatty-template .row .description {
+  padding-left: 1.2rem;
+  padding-top: 1rem;
+}
+.description .row p {
+  font-size: 1.3rem;
+}
+.description .program-name {
+  margin-bottom: 1rem;
+}
+.channel-name p {
+  display: inline-block;
+}
+.program-viewer p {
+  display: inline-block;
+}
+#viewerNum {
+  font-weight: bold;
+}
+.row p {
+  margin: 0;
 }
 .chatty-template .row .col-xs-6 {
   padding-right: 0;
   padding-left: 0;
 }
-.emptyspace{
-  padding: 4rem 1.5rem;
+.time {
+  width: 70%;
+  display: inline-block;
 }
-
+.collect {
+  width: 20%;
+  display: inline-block;
+}
+#collect {
+  float: right;
+  width: 2.4rem;
+}
 .nav li {
   display: inline;
   text-align: center;
