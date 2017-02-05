@@ -1,14 +1,53 @@
+html {
+  font-size: 10px;
+}
 body {
-  padding-top: 50px;
+  padding-top: 10.5rem;
+}
+.container-custom {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-custom {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  /*background-color: #0F1C36;*/
+}
+.navbar-custom .navbar-brand-custom {
+  color: #F8F8F8;
+  float: none;
+  display: inline-block;
+  font-size: 3rem;
+
+}
+.navbar-nav-custom {
+  margin: 0 -1.5rem;
 }
 .chatty-template {
-  padding: 20px 15px;
-  margin: 30px;
+  /*padding: 2rem 15px;*/
+  margin-left: 2rem;
+  margin-right: 2rem;
   background-color: #f8f8f8;
   text-align: center;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.program-img {
+  width: 100%;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.description {
+  width: 100%;
+}
+.chatty-template .row .col-xs-6 {
+  padding-right: 0;
+  padding-left: 0;
 }
 .emptyspace{
-  padding: 40px 15px;
+  padding: 4rem 1.5rem;
 }
 
 .nav li {
