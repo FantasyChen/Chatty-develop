@@ -10,7 +10,7 @@ body {
 }
 .navbar-custom {
   text-align: center;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: 0.15rem;
   /*background-color: #0F1C36;*/
 }
@@ -19,10 +19,14 @@ body {
   float: none;
   display: inline-block;
   font-size: 3rem;
+  font-family: 'Pacifico',cursive;
 
 }
 .navbar-nav-custom {
   margin: 0 -1.5rem;
+}
+.navbar-nav-custom li a img {
+  height: 1.8rem;
 }
 .chatty-template {
   /*padding: 2rem 15px;*/
@@ -41,7 +45,7 @@ body {
   margin-right: 0;
 }
 .container-custom .chatty-template .row .description {
-  padding-left: 0.3rem;
+  padding-left: 0.5rem;
   padding-top: 0rem;
 }
 .description .row p {
