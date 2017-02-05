@@ -1,10 +1,16 @@
 body {
   padding-top: 50px;
 }
-.starter-template {
-  padding: 40px 15px;
+.chatty-template {
+  padding: 20px 15px;
+  margin: 30px;
+  background-color: #f8f8f8;
   text-align: center;
 }
+.emptyspace{
+  padding: 40px 15px;
+}
+
 .nav li {
   display: inline;
   text-align: center;
