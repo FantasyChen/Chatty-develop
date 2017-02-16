@@ -23,7 +23,7 @@
   margin-bottom: 0.5rem;
 }
 
-.login .index-button button {
+.login .index-button a button {
   line-height: 3rem;
   width: 21rem;
   border: 0px solid #C4C4C4;
@@ -31,6 +31,6 @@
   background-color: #60b01a;
   border-radius: 2px;
 }
-.login .register-button button {
+.login .register-button a button {
   background-color: #35b3ce;
 }
