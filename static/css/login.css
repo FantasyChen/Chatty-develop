@@ -1,0 +1,36 @@
+.login .title {
+  width: 100%;
+  text-align: center;
+  color: #F8F8F8;
+  font-size: 9rem;
+  font-family: 'Pacifico',cursive;
+}
+.login-box {
+  margin-top: 2rem;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+.login-box input {
+  border-radius: 2px;
+  /*border-style: none;*/
+  width: 21rem;
+  line-height: 3rem;
+  border: 0.5px solid #C4C4C4;
+}
+.login .index-button {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.login .index-button button {
+  line-height: 3rem;
+  width: 21rem;
+  border: 0px solid #C4C4C4;
+  color: #F8F8F8;
+  background-color: #60b01a;
+  border-radius: 2px;
+}
+.login .register-button button {
+  background-color: #35b3ce;
+}
