@@ -11,7 +11,8 @@
   "main": "server.js",
   "dependencies": {
     "express": "3.x",
-    "mongodb": "^2.2.24"
+    "mongodb": "^2.2.24",
+    "monk": "^4.0.0"
   },
   "engines": {
     "node": "0.10.x"
