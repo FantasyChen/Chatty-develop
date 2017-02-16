@@ -1,11 +1,20 @@
 html {
   font-size: 10px;
+  height: 100%
+  /*min-height: 100%;*/
 }
 body {
   padding-top: 10.5rem;
+  background: #101D36; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #101D36, #253B67); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #101D36, #253B67); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #101D36, #253B67); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #101D36, #253B67); /* Standard syntax (must be last) */
+  background-size: cover;
 }
 .room {
   padding-top: 5rem;
+
 }
 .container-custom {
   padding-left: 0;
@@ -15,7 +24,7 @@ body {
   text-align: center;
   /*text-transform: uppercase;*/
   letter-spacing: 0.15rem;
-  /*background-color: #0F1C36;*/
+  background-color: #0D1D37;
 }
 .navbar-custom .navbar-brand-custom {
   color: #F8F8F8;
@@ -23,7 +32,8 @@ body {
   display: inline-block;
   font-size: 3rem;
   font-family: 'Pacifico',cursive;
-
+  /*temporary solution for centering the title*/
+  margin-left: -26px;
 }
 .navbar-nav-custom {
   margin: 0 -1.5rem;
