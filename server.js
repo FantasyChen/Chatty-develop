@@ -18,6 +18,39 @@ var index = require('./routes/index');
 // Create the server instance
 var app = express();
 
+// Create MongoDB
+var MongoClient = require('mongodb').MongoClient
+  , assert = require('assert');
+
+// Connection URL
+var url = 'mongodb://localhost:27017/Chatty-develop';
+
+// Use connect method to connect to the server
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+	insertDocuments(db, function() {
+    db.close();
+  });
+  // console.log("Connected successfully to server");
+	// console.log(db.getCollectionNames());
+});
+
+//test
+var insertDocuments = function(db, callback) {
+  // Get the documents collection
+  var collection = db.collection('documents');
+  // Insert some documents
+  collection.insertMany([
+    {a : 1}, {a : 2}, {a : 3}
+  ], function(err, result) {
+    assert.equal(err, null);
+    assert.equal(3, result.result.n);
+    assert.equal(3, result.ops.length); //true
+    console.log("Inserted 3 documents into the collection");
+    callback(result);
+  });
+}
+
 // Print logs to the console and compress pages we send
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.logger());
