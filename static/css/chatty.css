@@ -4,6 +4,9 @@ html {
 body {
   padding-top: 10.5rem;
 }
+.room {
+  padding-top: 5rem;
+}
 .container-custom {
   padding-left: 0;
   padding-right: 0;
