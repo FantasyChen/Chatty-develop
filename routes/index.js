@@ -1,6 +1,11 @@
-var data = require('../data.json');
-
-exports.view = function(req, res) {
+exports.view = function(req, res){
   //console.log(data);
-  res.render('index',data);
+  var db = req.db;
+  var collection = db.get("programs");
+  collection.find({},{},function(e,docs){
+        console.log(docs.length);
+        // res.json(docs);
+        var wrapper = {'programs':docs};
+        res.render('index', wrapper);
+    });
 };
