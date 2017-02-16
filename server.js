@@ -22,8 +22,7 @@ var findProgram = require('./routes/findProgram');
 // Create the server instance
 var app = express();
 
-// Connection URL
-var url = 'mongodb://localhost:27017/Chatty-develop';
+
 // MongoDB Connection
 var mongo = require('mongodb');
 var monk = require('monk');
@@ -50,11 +49,12 @@ app.use(express.static(__dirname + '/static'));
 
 
 /// catch 404 and forwarding to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
+// app.use(function(req, res, next) {
+//     var err = new Error('Not Found');
+//     err.status = 404;
+//     next(err);
+// });
+
 
 // add routes here
 app.get('/',index.view);
