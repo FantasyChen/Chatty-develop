@@ -2,18 +2,7 @@
  * Unicorn Admin Template
  * Diablo9983 -> diablo9983@gmail.com
 **/
-* {
-	outline:none !important;
-	-moz-outline: none !important;
-}
-/* Main */
-body {
-	overflow-x: hidden;
-    /*margin-top: -9px;*/
-}
-a:hover {
-	text-decoration: none;
-}
+
 
 /* send box*/
 .sendBox {
@@ -27,17 +16,6 @@ a:hover {
 }
 
 /* Room Name */
-.room-name {
-	height: 50px;
-	padding: 15px 15px;
-	font-size: 18px;
-	line-height: 20px;
-	display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-}
-
 /* chatting dialogue */
 .chat-content {
 	height: 470px;
@@ -166,25 +144,3 @@ a:hover {
     right: 10px;
     top: 12px;
 }
-
-@media (max-width: 767px) {
-	body {
-		/*padding: 0 !important;*/
-	}
-}
-
-@media (max-width: 768px){
-	.navbar-header {
-	    text-align: center;
-	    width: 100%;
-	}
-	.navbar-brand {
-		float:none;
-	        display:inline-block;
-	  	margin-left: auto;
-	  	margin-right: auto;
-	  	/*margin-top: 0;*/
-	}
-}
-
-@charset "UTF-8";
