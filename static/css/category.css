@@ -1,0 +1,26 @@
+.category-container {
+  margin: 0;
+  padding: 1rem;
+}
+.category {
+  margin-bottom: 1rem;
+}
+.category p {
+  margin: 0;
+  color: #F8F8F8;
+  font-family:
+}
+.category .list ul {
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
+  white-space: nowrap;
+  /*display: inline-block;*/
+}
+.category .list ul li {
+  display: inline-block;
+}
+.category .list ul li .program-img {
+  width: 18rem;
+  box-shadow: 1px 1px 10px 0px rgba(1, 1, 1, 0.5);
+}

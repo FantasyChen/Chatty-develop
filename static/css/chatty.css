@@ -14,6 +14,8 @@ body {
   background: linear-gradient(to bottom right, #101D36, #253B67); /* Standard syntax (must be last) */
   background-size: cover;
   height: 100%;
+  background-attachment: fixed;
+  /*overflow-y: scroll;*/
 }
 
 .room {
@@ -45,7 +47,7 @@ body {
   font-size: 3rem;
   font-family: 'Pacifico',cursive;
   /*temporary solution for centering the title*/
-  margin-left: -26px;
+  /*margin-left: -26px;*/
 }
 .navbar-nav-custom {
   margin: 0 -1.5rem;
@@ -122,7 +124,8 @@ body {
   text-align: center;
 }
 .nav li a {
-  box-shadow: 0px 1px 0px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.5),-2px 3px 5px 0 rgba(0, 0, 0, 0.5);
+  /*box-shadow: -2px 3px 5px 0 rgba(0, 0, 0, 0.5);*/
   display: inline-block;
   width: 24%;
 
