@@ -5,12 +5,16 @@ html {
 body {
   padding-top: 10.5rem;
   /*background: #101D36; /* For browsers that do not support gradients */*/
+
+}
+.bg-custom {
   background: -webkit-linear-gradient(left top, #101D36, #253B67); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, #101D36, #253B67); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, #101D36, #253B67); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #101D36, #253B67); /* Standard syntax (must be last) */
   background-size: cover;
 }
+
 .room {
   padding-top: 5rem;
 
@@ -19,11 +23,19 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
+.navbar {
+  color: #0a1b35;
+}
+.navbar-inverse {
+  color: #081528;
+  background-color: inherit;
+}
 .navbar-custom {
   text-align: center;
   /*text-transform: uppercase;*/
   letter-spacing: 0.15rem;
   background-color: #0D1D37;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .navbar-custom .navbar-brand-custom {
   color: #F8F8F8;
@@ -109,6 +121,7 @@ body {
   text-align: center;
 }
 .nav li a {
+  box-shadow: 0px 1px 0px 0 rgba(0, 0, 0, 0.5);
   display: inline-block;
   width: 24%;
 

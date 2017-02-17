@@ -18,14 +18,19 @@
   line-height: 3rem;
   border: 0.5px solid #C4C4C4;
 }
-.login .index-button {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
+
+
 
 .login .errorbox{
   text-align: center;
   color: white;
+}
+
+
+
+.login .index-button {
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 
@@ -38,6 +43,7 @@
   background-color: #60b01a;
   border-radius: 2px;
 }
+
 .login input[type=submit].registerBtn{
   margin: auto;
   line-height: 3rem;

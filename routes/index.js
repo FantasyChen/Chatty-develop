@@ -7,3 +7,16 @@ exports.view = function(req, res){
         res.render('index', wrapper);
     });
 };
+
+exports.room = function(req, res) {
+  res.render('room');
+}
+exports.favorites = function(req, res) {
+  res.render('favorites');
+}
+exports.category = function(req, res) {
+  res.render('category');
+}
+exports.account = function(req, res) {
+  res.render('account');
+}
