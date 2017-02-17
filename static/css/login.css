@@ -44,7 +44,7 @@
   border-radius: 2px;
 }
 
-.login input[type=submit].registerBtn{
+.login .registerBtn{
   margin: auto;
   line-height: 3rem;
   width: 21rem;

@@ -1,17 +1,20 @@
+'use strict';
+
+
+
 $(document).ready(function() {
 	initializePage();
 })
 
 function initializePage() {
-  $('.register-button').click(showRegister);
+  $('.registerBtn').click(showRegister);
 }
 
 function showRegister(e) {
   e.preventDefault();
-
+	console.log("JS connected");
   var page = $('.login-box');
   var $confirmPwd = $("<div class='confirmPwd-box'><input type='text' class='confirmPwd' placeholder='Confirm Your Password'/></div>");
-  $("document").removeClass(".login-button");
+  $("document").removeClass(".loginBtn");
   page.append($confirmPwd);
-
 }

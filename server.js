@@ -27,7 +27,7 @@ var app = express();
 // MongoDB Connection
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/Chatty');
+var db = monk('mongodb://fantasy:123456@ds153729.mlab.com:53729/chatty-develop');
 
 // Make our db accessible to our router
 app.use(function(req,res,next){
