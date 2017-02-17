@@ -58,7 +58,12 @@ app.use(express.static(__dirname + '/static'));
 
 // add routes here
 app.get('/',index.view);
+app.get('/room',index.room);
+app.get('/favorites',index.favorites);
+app.get('/category', index.category);
+app.get('/profile', index.profile);
 app.get('/program', findProgram.program);
+
 
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 3000 for development
