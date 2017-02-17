@@ -18,6 +18,7 @@ var handlebars = require('express3-handlebars');
 // routes
 var index = require('./routes/index');
 var findProgram = require('./routes/findProgram');
+var login = require('./routes/login');
 
 // Create the server instance
 var app = express();
@@ -59,6 +60,9 @@ app.use(express.static(__dirname + '/static'));
 // add routes here
 app.get('/',index.view);
 app.get('/program', findProgram.program);
+app.get('/account/login', login.view);
+app.get('/account/session', login.session);
+app.get('/account/login/user', login.log);
 
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 3000 for development
