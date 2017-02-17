@@ -51,6 +51,7 @@
 }
 .message-box button img{
 	width: 100%;
+	float: right;
 }
 .chat-interface {
 	/*padding: 1.5rem;*/
@@ -74,32 +75,32 @@
 /*profile img*/
 .messages .message-block img {
     display: inline-block;
-    float: left;
+    float: right;
     vertical-align: middle;
     width: 28px;
     height: 28px;
     margin-top: 6px;
-		border-radius: 15px;
-		bottom: 10px;
-		position: relative;
+	border-radius: 15px;
+	bottom: 10px;
+	position: relative;
 }
 .messages .message-block .msg-content{
     background: rgba(216, 216, 216, 0.4);
-		border-radius: 2px;
-		border-bottom-left-radius: 0;
-    /*border: 1px solid #cccccc;*/
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border: 1px solid #777;
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5);
     display: block;
-    margin-left: 40px;
+    margin-right: 40px;
     padding: 7px;
-    position: relative;
-		color: #F5F5F5;
+    position: initial;
+    color: #F5F5F5;
 }
 .messages .message-block .timestamp {
 	margin-top: 4px;
-	margin-right: 2px;
-	float: right;
-	color: #C4C4C4;
-	font-size: 1.1rem;
+    margin-right: 2px;
+    float: left;
+    font-size: 1.1rem;
+    color: white;
 
 }
