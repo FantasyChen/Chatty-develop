@@ -19,6 +19,7 @@ var handlebars = require('express3-handlebars');
 var index = require('./routes/index');
 var findProgram = require('./routes/findProgram');
 var login = require('./routes/login');
+var room = require('./routes/room');
 
 // Create the server instance
 var app = express();
@@ -39,6 +40,8 @@ app.use(function(req,res,next){
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.logger());
 app.use(express.compress());
+app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.urlencoded()); // to support URL-encoded bodies
 app.engine('handlebars',handlebars());
 app.set('view engine', 'handlebars');
 
@@ -58,8 +61,15 @@ app.use(express.static(__dirname + '/static'));
 
 
 // add routes here
+
+// index routes
 app.get('/',index.view);
-app.get('/room',index.room);
+
+// room routes
+app.get('/room:program', room.view);
+app.post('/room/message:program', room.message);
+
+
 app.get('/favorites',index.favorites);
 app.get('/category', index.category);
 app.get('/account', index.account);
