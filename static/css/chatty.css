@@ -5,12 +5,16 @@ html {
 body {
   padding-top: 10.5rem;
   /*background: #101D36; /* For browsers that do not support gradients */*/
+ 
+}
+.bg-custom {
   background: -webkit-linear-gradient(left top, #101D36, #253B67); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, #101D36, #253B67); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, #101D36, #253B67); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #101D36, #253B67); /* Standard syntax (must be last) */
   background-size: cover;
 }
+
 .room {
   padding-top: 5rem;
 
