@@ -38,14 +38,9 @@ function renderMessage(data){
     </div>\
   </div>';
   $('.messages').append(addHTML);
-  console.log($('.messages').height());
-  $(".messages").scrollTop($('.messages').height());
-  //updateScrollBar();
+  updateScrollBar();
 }
 
 function updateScrollBar() {
-  $('.messages').mCustomScrollbar("update").mCustomScrollbar('scrollTo', 'bottom', {
-    scrollInertia: 10,
-    timeout: 0
-  });
+  $('html, body').scrollTop( $(document).height() - $(window).height() );
 }

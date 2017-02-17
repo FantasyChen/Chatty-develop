@@ -4,7 +4,7 @@ html {
 }
 body {
   padding-top: 10.5rem;
-  /*background: #101D36; /* For browsers that do not support gradients */*/
+  background: #101D36; /* For browsers that do not support gradients */
 
 }
 .bg-custom {
@@ -13,6 +13,7 @@ body {
   background: -moz-linear-gradient(bottom right, #101D36, #253B67); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, #101D36, #253B67); /* Standard syntax (must be last) */
   background-size: cover;
+  height: 100%;
 }
 
 .room {
@@ -28,7 +29,7 @@ body {
 }
 .navbar-inverse {
   color: #081528;
-  background-color: inherit;
+  background-color: #0a1b35;
 }
 .navbar-custom {
   text-align: center;
