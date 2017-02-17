@@ -17,9 +17,12 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bahiana|Lobster|Pacifico|Barrio" rel="stylesheet" type="text/css">
+
     <!-- Custom styles for this template -->
     <link href="./css/chatty.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bahiana|Lobster|Pacifico|Barrio" rel="stylesheet" type="text/css">
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
@@ -49,72 +52,56 @@
       </div>
     </nav>
 
-    <div class = "container">
+    <!-- <div class = "container">
       <div class = "emptyspace">
       </div>
-    </div>
-    <div class="container">
-      <div class = "chatty-template">
-        <div class="row">
-          <div class = "col-xs-3">
-            <p>Picture </p>
-          </div>
-          <div class = "col-xs-9">
-            <div class = "row">
-              <p>Name </p>
-            </div>
-            <div class = "row">
-              <p>Number </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div> -->
+    <div class="container container-custom">
 
+
+      <!-- test for handlebars -->
+      {{#each programs}}
       <div class = "chatty-template">
+        <a class="link" href="./room:{{program-name}}">
         <div class="row">
-          <div class = "col-xs-3">
-            <p>Picture </p>
+          <div class = "col-xs-6">
+            <img class="program-img" src="{{imgURL}}" />
           </div>
-          <div class = "col-xs-9">
-            <div class = "row">
-              <p>Name </p>
+          <div class = "description col-xs-6">
+            <div class = "row channel-name">
+              <p>{{channel-name}}</p><span> - </span>
             </div>
-            <div class = "row">
-              <p>Number </p>
+            <div class = "row program-name">
+              <p>{{program-name}}</p>
+            </div>
+            <div class="time">
+              <div class = "row program-time">
+                <p>{{program-time}}</p>
+              </div>
+              <div class = "row program-viewer">
+                <p>Live Viewers: </p> <span id="viewerNum">{{viewerNum}}</span>
+              </div>
+            </div>
+            <div class="collect">
+              <a href="#">
+                <img id="collect" src="./img/star_gold_small.png"/>
+              </a>
             </div>
           </div>
         </div>
+        </a>
       </div>
-      <div class = "chatty-template">
-        <div class="row">
-          <div class = "col-xs-3">
-            <p>Picture</p>
-          </div>
-          <div class = "col-xs-9">
-            <div class = "row">
-              <p>Name </p>
-            </div>
-            <div class = "row">
-              <p>Number</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class = "chatty-template">
-        <div class="row">
-          <div class = "col-xs-3">
-            <p>Picture</p>
-          </div>
-          <div class = "col-xs-9">
-            <div class = "row">
-              <p>Name </p>
-            </div>
-            <div class = "row">
-              <p>Number</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      {{/each}}
+
+
+
+
+
+
+
+
+
+
     </div><!-- /.container -->
 
 

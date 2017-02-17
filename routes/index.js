@@ -12,7 +12,12 @@ exports.room = function(req, res) {
   res.render('room');
 }
 exports.favorites = function(req, res) {
-  res.render('favorites');
+  var db = req.db;
+  var collection = db.get("programs");
+  collection.find({},{},function(e,docs){
+        var wrapper = {'programs':docs};
+        res.render('favorites', wrapper);
+    });
 }
 exports.category = function(req, res) {
   res.render('category');
