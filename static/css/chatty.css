@@ -38,7 +38,7 @@ body {
   /*text-transform: uppercase;*/
   letter-spacing: 0.15rem;
   background-color: #0D1D37;
-  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .navbar-custom .navbar-brand-custom {
   color: #F8F8F8;
@@ -52,6 +52,9 @@ body {
 .navbar-nav-custom {
   margin: 0 -1.5rem;
 }
+/*.navbar-nav-custom li a{
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.5);
+}*/
 .navbar-nav-custom li a img {
   height: 1.8rem;
 }
