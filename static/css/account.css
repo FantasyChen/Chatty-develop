@@ -1,26 +1,82 @@
-
-
-/* username */
-.account-username{
-  text-align: center;
-  font-size: 25px;
-  color: #9a9999;
-}
-
 /* avatar */
-.account-avatar {
-  margin: auto;   
-  left: 0;
-  right: 0;  
+.container-account {
+  margin: 0;
+  padding: 1.5rem;
+}
+.profile-box {
+  margin-bottom: 5.5rem;
+}
+.avatar-box {
+  width: 50%;
+  text-align: right;
+  padding-right: 10px;
+  display: inline-table;
+}
+@media (min-width: 768px) {
+  .avatar-box {
+    margin: 35px;
+  }
+}
+.avatar-box img{
+  /*margin: auto;*/
+  /*left: 0;*/
+  /*right: 0;*/
+
+  /*margin: 2.5rem;*/
   z-index: 1;
   border-radius: 100px;
-  width: 100px;
-  height: 100px;
+  width: 135px;
+  height: 135px;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.24);
-}
 
-.account-avatar img {
-  width: 100%;
-  height: auto;
+}
+.user-box {
+  width: 48%;
+  display: inline-table;
+  color: #F8F8F8;
+  padding-top: 1rem;
+  padding-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.username {
+  font-size:2rem;
+}
+.edit-profile a{
+  text-decoration: none;
+  color: #F8F8F8;
+  font-size: 1.3rem;
+}
+.control-list {
+  list-style-type: none;
+  padding-left: 0;
+
+}
+.control-icon {
+  width: 53px;
+  text-align: center;
+  display: inline-block;
+}
+.control-icon img{
+  height: 24px;
+}
+.control-list {
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.control-list a li, .logout {
+  background-color: rgba(216,216,216,0.4);
+  text-decoration: none;
+  color: #F8F8F8;
+  line-height: 45px;
+  font-size: 16px;
+  margin-bottom: 1px;
+}
+.logout {
+  margin-top: 27px;
+  text-align: center;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.logout:hover,.logout:active {
+  text-decoration: none;
 }
