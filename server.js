@@ -68,9 +68,6 @@ app.get('/',index.view);
 
 // room routes
 app.get('/room:program', room.view);
-app.post('/room/message:program', room.message);
-
-
 app.get('/favorites',index.favorites);
 app.get('/category', index.category);
 app.get('/account', index.account);
@@ -89,8 +86,4 @@ var server = app.listen(port, function() {
 
 // Start the socket
 var io = require('socket.io')(server);
-io.on('connection', function(socket){
-  socket.on('foo', function(data) {
-    console.log('Message captured: ' + data.content);
-  })
-});
+io.on('connection', room.socketListener);
