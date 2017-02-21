@@ -67,7 +67,7 @@ app.use(express.static(__dirname + '/static'));
 app.get('/',index.view);
 
 // room routes
-app.get('/room:program', room.view);
+app.get('/room/:program', room.view);
 app.get('/favorites',index.favorites);
 app.get('/category', index.category);
 app.get('/account', index.account);
@@ -86,4 +86,20 @@ var server = app.listen(port, function() {
 
 // Start the socket
 var io = require('socket.io')(server);
-io.on('connection', room.socketListener);
+io.on('connection', // Chatroom sockets is handled here
+function(socket){
+  var room = "";
+  socket.on("sendMsg", function(data){
+    console.log("Server received message: " + data.content);
+    socket.broadcast.to(room).emit('receiveMsg', data);   // broadcast the message to everyone in the room except self.
+  });
+  socket.on('login', function(data){
+    console.log("An user have logged in");
+    room = data.programName;
+    socket.join(room, function(){
+      var userCount = io.sockets.adapter.rooms[room].length;
+      console.log(userCount);
+      socket.to(room).emit("userJoined", userCount);
+    });
+  });
+});
