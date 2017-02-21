@@ -28,6 +28,11 @@ $(document).ready(function() {
 function initializePage() {
   console.log("hhhh");
   $('.message-submit').click(sendMessage);
+  $('input[type="text"].message-input').keydown(function(e){
+    if (e.keyCode == 13){
+      sendMessage(e);
+    }
+  });
 }
 
 function sendMessage(e) {
