@@ -119,9 +119,8 @@ function renderReceivedMessage(data){
 }
 
 function renderUserJoined(data){
-  console.log("current number of connected users:" + data
+  console.log("current number of connected users:" + data);
 }
-
 
 
 function updateScrollBar() {
