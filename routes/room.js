@@ -8,7 +8,10 @@ exports.view = function(req, res){
 };
 
 
-exports.message = function(req, res){
-  var db = req.db;
-  res.json(req.body);
+
+exports.socketListener = function(socket){
+  socket.on("sendMsg", function(data){
+    console.log("Server received message: " + data.content);
+    socket.broadcast.emit('receiveMsg', data);
+  });
 }

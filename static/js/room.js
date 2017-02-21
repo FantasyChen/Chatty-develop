@@ -1,7 +1,7 @@
 'use strict';
 
 var i = 0;
-
+var socket;
 var Fake = [
   'Hi there, I\'m Trump and you?',
   'Nice to meet you',
@@ -26,7 +26,8 @@ $(document).ready(function() {
 })
 
 function initializePage() {
-  console.log("hhhh");
+  socket = io.connect();
+  socket.on("receiveMsg", renderReceivedMessage);
   $('.message-submit').click(sendMessage);
   $('input[type="text"].message-input').keydown(function(e){
     if (e.keyCode == 13){
@@ -48,8 +49,8 @@ function sendMessage(e) {
     var message = {
       "content":content
     };
-    $.post('/room/message' + roomName, message, renderMessage);
-
+    renderMessage(message);
+    socket.emit("sendMsg", message);
 	}
 }
 
@@ -87,9 +88,26 @@ function renderMessage(data){
   $('.messages').append(addHTML);
   updateScrollBar();
 	setTimeout(function() {
-	fakeMessage();
+	// fakeMessage();
 	}, 1000 + (Math.random() * 20) * 100);
 }
+
+function renderReceivedMessage(data){
+	console.log("received");
+	var content = data.content;
+  var date = new Date();
+  var time = date.getHours() + ":" + date.getMinutes();
+  var addHTML = '<div class="message-inverse">\
+    <div class="msg-content">' + content +
+    '</div>\
+    <img id="" class="" src="./img/trump.jpeg" alt="">\
+    <div class="timestamp" id="">' + time + '\
+    </div>\
+  </div>';
+  $('.messages').append(addHTML);
+  updateScrollBar();
+}
+
 
 function updateScrollBar() {
   $('html, body').scrollTop( $(document).height() - $(window).height() );
