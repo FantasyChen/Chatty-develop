@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 function initializePage() {
   room = $('#roomName').text();
-  socket = io.connect('http://localhost:3000', {'sync disconnect on unload':true});
+  socket = io.connect();
   socket.emit("login", {programName: room});
   socket.on("receiveMsg", renderReceivedMessage);
   socket.on("userJoined", renderUserJoined);
@@ -119,7 +119,7 @@ function renderReceivedMessage(data){
 }
 
 function renderUserJoined(data){
-  console.log("current number of connected users:" + data);
+  console.log("current number of connected users:" + data
 }
 
 
