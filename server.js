@@ -15,6 +15,7 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 
+
 // routes
 var index = require('./routes/index');
 var findProgram = require('./routes/findProgram');
@@ -81,6 +82,15 @@ app.get('/account/login/user', login.log);
 
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 3000 for development
-app.listen(port, function() {
+var server = app.listen(port, function() {
 	console.log("Node.js server running on port %s", port);
+});
+
+
+// Start the socket
+var io = require('socket.io')(server);
+io.on('connection', function(socket){
+  socket.on('foo', function(data) {
+    console.log('Message captured: ' + data.content);
+  })
 });

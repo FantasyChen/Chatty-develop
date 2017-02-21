@@ -1,7 +1,6 @@
 'use strict';
 
 var i = 0;
-
 var Fake = [
   'Hi there, I\'m Trump and you?',
   'Nice to meet you',
@@ -48,7 +47,9 @@ function sendMessage(e) {
     var message = {
       "content":content
     };
-    $.post('/room/message' + roomName, message, renderMessage);
+    var socket = io.connect();
+    socket.emit('foo', message);
+    renderMessage(message);
 
 	}
 }

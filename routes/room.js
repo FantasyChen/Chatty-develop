@@ -10,5 +10,6 @@ exports.view = function(req, res){
 
 exports.message = function(req, res){
   var db = req.db;
-  res.json(req.body);
+  console.log(req.body.content);
+  res.send(req.body);
 }
