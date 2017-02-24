@@ -29,14 +29,9 @@ var app = express();
 
 // MongoDB Connection
 var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('mongodb://fantasy:123456@ds153729.mlab.com:53729/chatty-develop');
-
-// Make our db accessible to our router
-app.use(function(req,res,next){
-    req.db = db;
-    next();
-});
+var mongoose = require('mongoose');
+var mongoURL = 'mongodb://fantasy:123456@ds153729.mlab.com:53729/chatty-develop'
+mongoose.connect(mongoURL);
 
 // Print logs to the console and compress pages we send
 app.set('views', path.join(__dirname, 'views'));

@@ -37,10 +37,17 @@
       <div class="title">
         Chatiee
       </div>
+      {{#if error}}
+      <div class = "errorbox">
+        <p>
+          Incorrect username or password.
+        </p>
+      </div>
+      {{/if}}
     <form id="loginForm" role="form" method="get" action="/account/login/user">
       <div class="login-box">
         <div class="username-box">
-          <input type="text" class="username" placeholder="Email" name = "username"/>
+          <input type="text" class="username" placeholder="Username" name = "username"/>
         </div>
         <div class="password-box">
           <input type="password" class="password" placeholder="Password" name = "password"/>
@@ -48,7 +55,7 @@
       </div>
       <div class = "forgetbox">
         <p>
-          <a href = "#">Forgot account </a> or <a href = '#'>password</a> ?
+          <a href = "#">Forgot username </a> or <a href = '#'>password</a> ?
         </p>
       </div>
       <div class = "login index-button">
