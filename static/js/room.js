@@ -3,6 +3,7 @@
 
 var socket;
 var room = "";
+var user = null;
 
 // var i = 0;
 // var Fake = [

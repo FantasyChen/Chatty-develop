@@ -21,6 +21,14 @@
 
 
 </head>
+
+<div id="savedLoginInfo" style="display: none;">
+	{{#if isAuthen}}
+		{{user}}
+	{{else}}
+		None
+	{{/if}}
+</div>
 <body class="room">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">

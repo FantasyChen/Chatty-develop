@@ -9,11 +9,11 @@ var PORT = 3000;
 // Express is a web framework for node.js
 // that makes nontrivial applications easier to build
 var express = require('express');
-
 // dependencies
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
+var passport = require('passport');
 
 
 // routes
@@ -22,6 +22,7 @@ var findProgram = require('./routes/findProgram');
 var login = require('./routes/login');
 var room = require('./routes/room');
 var search = require('./routes/search');
+var models = require('./model');
 
 // Create the server instance
 var app = express();
@@ -33,10 +34,60 @@ var mongoose = require('mongoose');
 var mongoURL = 'mongodb://fantasy:123456@ds153729.mlab.com:53729/chatty-develop'
 mongoose.connect(mongoURL);
 
+
+// User authentication
+
+
+// Express and Passport Session
+var session = require('express-session');
+var passport = require('passport')
+  , LocalStrategy = require('passport-local').Strategy;
+
+passport.use(new LocalStrategy(
+	{
+		usernameField:'username',
+		passwordField:'password'
+	},
+  function(username, password, done) {
+    models.User.findOne({ 'userID': username }, function(err, user) {
+      if (err) {return done(err); }
+      if (!user) {
+        return done(null, false);
+      }
+      if (user.pwd!= password) {
+        return done(null, false);
+      }
+      return done(null, user);
+    });
+  }
+));
+
+passport.serializeUser(function(user, done) {
+  // placeholder for custom user serialization
+  // null is for errors
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+  // placeholder for custom user deserialization.
+  // maybe you are going to get the user from mongo by id?
+  // null is for errors
+	  models.User.findOne({'userID':user.userID}, function (err, user) {
+		done(err, user);
+	});
+});
+
+
+app.use(session({secret: "Fantasy is awesome"}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 // Print logs to the console and compress pages we send
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.logger());
 app.use(express.compress());
+app.use(express.bodyParser());
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.engine('handlebars',handlebars());
@@ -65,15 +116,16 @@ app.get('/',index.view);
 // room routes
 app.get('/room/:program', room.view);
 app.get('/favorites',index.favorites);
-// app.get('/category', index.category);
 app.get('/category', search.view);
 app.get('/category/search', search.search);
-
 app.get('/account', index.account);
 app.get('/program', findProgram.program);
 app.get('/account/login', login.view);
+app.get('/account/logout', login.logout);
 app.get('/account/session', login.session);
-app.get('/account/login/user', login.log);
+app.post('/account/login/user', passport.authenticate('local', { failureRedirect: '/account/session'}), function(req, res) {
+    res.redirect('/');
+  });
 
 
 // Start the server

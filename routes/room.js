@@ -6,6 +6,8 @@ exports.view = function(req, res){
 
   console.log("The room name is " + programName);
   res.render('room', {
-    'name' : programName
+    'name' : programName,
+    'isAuthen':req.isAuthenticated(),
+     'user':req.user
   });
 };

@@ -5,21 +5,19 @@ exports.view = function(req, res){
   models.Program
 		.find()
 		.exec(function(err, programs){
-      res.render('index', {'programs': programs});
+      res.render('index', {'programs': programs, 'isAuthen':req.isAuthenticated(), 'user':req.user});
     });
 };
 
-exports.room = function(req, res) {
-  res.render('room');
-}
 
 exports.favorites = function(req, res) {
   models.Program
 		.find()
 		.exec(function(err, programs){
-      res.render('favorites', {'programs': programs});
+      res.render('favorites', {'programs': programs, 'isAuthen':req.isAuthenticated(), 'user':req.user});
     });
 }
+
 exports.account = function(req, res) {
-  res.render('account');
+  res.render('account', {'isAuthen':req.isAuthenticated(), 'user':req.user});
 }
