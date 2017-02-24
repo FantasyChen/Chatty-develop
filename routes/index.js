@@ -19,9 +19,6 @@ exports.favorites = function(req, res) {
         res.render('favorites', wrapper);
     });
 }
-exports.category = function(req, res) {
-  res.render('category');
-}
 exports.account = function(req, res) {
   res.render('account');
 }

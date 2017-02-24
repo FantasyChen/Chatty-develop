@@ -12,14 +12,14 @@
     <title>Chatty U :)</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
     <!-- Custom styles for this template -->
-    <link href="./css/chatty.css" rel="stylesheet">
-    <link href="./css/category.css" rel="stylesheet">
+    <link href="/css/chatty.css" rel="stylesheet">
+    <link href="/css/category.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bahiana|Lobster|Pacifico|Barrio" rel="stylesheet" type="text/css">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -41,103 +41,151 @@
         </div>
         <div id="navbar">
           <ul class="nav navbar-nav navbar-nav-custom">
-            <li><a href="/"><img src="./img/navbar-icon/home-white-small.png" /></a></li>
-            <li class="active"><a href="#"><img src="./img/navbar-icon/search-small.png" /></a></li>
-            <li><a href="./favorites"><img src="./img/navbar-icon/star-white-small.png" /></a></li>
-            <li><a href="./account"><img src="./img/navbar-icon/profile-white-small.png" /></a></li>
+            <li><a href="/"><img src="/img/navbar-icon/home-white-small.png" /></a></li>
+            <li class="active"><a href="#"><img src="/img/navbar-icon/search-small.png" /></a></li>
+            <li><a href="/favorites"><img src="/img/navbar-icon/star-white-small.png" /></a></li>
+            <li><a href="/account"><img src="/img/navbar-icon/profile-white-small.png" /></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="category-container">
-      <div class="category most-popular">
-        <p>
-          Most Popular
-        </p>
-        <div class="list">
-          <ul>
-            <li>
-              <a href="/room:LNSM">
-                <img class="program-img" src="./img/LNSMLogo.jpg" />
-              </a>
-            </li>
-            <li>
-              <a href="/room:Tonight Show">
-                <img class="program-img" src="./img/TonightShowLogo.jpg" />
-              </a>
-            </li>
-            <li>
-              <a href="/room:Late Late Show">
-                <img class="program-img" src="./img/TheLateLateShowLogo.jpg" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="category tvshows">
-        <p>
-          TV Shows
-        </p>
-        <div class="list">
-          <ul>
-            <li>
-              <a href="/room:Scandal">
-                <img class="program-img" src="./img/ScandalLogo.jpg" />
-              </a>
-            </li>
-            <li>
-              <a href="/room:Westoworld">
-                <img class="program-img" src="./img/WestworldLogo.jpg" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="category news">
-        <p>
-          News
-        </p>
-        <div class="list">
-          <ul>
-            <li>
-              <a href="/room:Newsroom">
-                <img class="program-img" src="./img/NewsRoomLogo.jpg" />
-              </a>
-            </li>
-            <li>
-              <a href="/room:ABC">
-                <img class="program-img" src="./img/abc-news-logo.jpg" />
-              </a>
-            </li>
-          </ul>
+      <!-- search test -->
+      <form id="searchForm" role="form" method="get" action="/category/search">
+      <diva>
+        <div>
+          <input type="text" class="category" placeholder="Category" name = "category"/>
         </div>
       </div>
-      <div class="category kids">
-        <p>
-          For Kids
-        </p>
-        <div class="list">
-          <ul>
-            <li>
-              <a href="/room:Sesame Street">
-                <img class="program-img" src="./img/SesameStreet.png" />
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div>
+        <input type = "submit" id = "searchBtn" value = "Search" class = "searchBtn">
+        </input>
       </div>
+    </form>
+
+    {{#if search}}
+      {{#each programs}}
+        <div class = "chatty-template">
+          <a class="link" href="/room/{{program-name}}">
+          <div class="row">
+            <div class = "col-xs-6">
+              <img class="program-img" src="{{imgURL}}" />
+            </div>
+            <div class = "description col-xs-6">
+              <div class = "row channel-name">
+                <p>{{channel-name}}</p><span> - </span>
+              </div>
+              <div class = "row program-name">
+                <p>{{program-name}}</p>
+              </div>
+              <div class="time">
+                <div class = "row program-time">
+                  <p>{{program-time}}</p>
+                </div>
+                <div class = "row program-viewer">
+                  <p>Live Viewers: </p> <span id="viewerNum">{{viewerNum}}</span>
+                </div>
+              </div>
+              <div class="collect">
+                <a href="#">
+                  <img id="collect" src="/img/star_gold_small.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+        {{/each}}
+      {{else}}
+        <div class="category most-popular">
+          <p>
+            Most Popular
+          </p>
+          <div class="list">
+            <ul>
+              <li>
+                <a href="/room:LNSM">
+                  <img class="program-img" src="/img/LNSMLogo.jpg" />
+                </a>
+              </li>
+              <li>
+                <a href="/room:Tonight Show">
+                  <img class="program-img" src="/img/TonightShowLogo.jpg" />
+                </a>
+              </li>
+              <li>
+                <a href="/room:Late Late Show">
+                  <img class="program-img" src="/img/TheLateLateShowLogo.jpg" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="category tvshows">
+          <p>
+            TV Shows
+          </p>
+          <div class="list">
+            <ul>
+              <li>
+                <a href="/room:Scandal">
+                  <img class="program-img" src="/img/ScandalLogo.jpg" />
+                </a>
+              </li>
+              <li>
+                <a href="/room:Westoworld">
+                  <img class="program-img" src="/img/WestworldLogo.jpg" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="category news">
+          <p>
+            News
+          </p>
+          <div class="list">
+            <ul>
+              <li>
+                <a href="/room:Newsroom">
+                  <img class="program-img" src="/img/NewsRoomLogo.jpg" />
+                </a>
+              </li>
+              <li>
+                <a href="/room:ABC">
+                  <img class="program-img" src="/img/abc-news-logo.jpg" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="category kids">
+          <p>
+            For Kids
+          </p>
+          <div class="list">
+            <ul>
+              <li>
+                <a href="/room:Sesame Street">
+                  <img class="program-img" src="/img/SesameStreet.png" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      {{/if}}
 
     </div>
 
 
     <!-- Bootstrap core JavaScript
-    ================================================== -->
+    ==================================================
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="./vendor/jquery.min.js"><\/script>')</script>
-    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
   </body>

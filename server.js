@@ -21,6 +21,7 @@ var index = require('./routes/index');
 var findProgram = require('./routes/findProgram');
 var login = require('./routes/login');
 var room = require('./routes/room');
+var search = require('./routes/search');
 
 // Create the server instance
 var app = express();
@@ -69,7 +70,10 @@ app.get('/',index.view);
 // room routes
 app.get('/room/:program', room.view);
 app.get('/favorites',index.favorites);
-app.get('/category', index.category);
+// app.get('/category', index.category);
+app.get('/category', search.view);
+app.get('/category/search', search.search);
+
 app.get('/account', index.account);
 app.get('/program', findProgram.program);
 app.get('/account/login', login.view);
