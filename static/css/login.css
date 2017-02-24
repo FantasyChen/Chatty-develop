@@ -58,3 +58,13 @@
   border-radius: 2px;
   background-color: #35b3ce;
 }
+
+.login input[type=submit].guestBtn{
+  margin: auto;
+  line-height: 3rem;
+  width: 21rem;
+  border: 0px solid #C4C4C4;
+  color: #F8F8F8;
+  border-radius: 2px;
+  background-color: #695a5a;
+}

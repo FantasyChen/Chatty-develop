@@ -53,17 +53,28 @@
     <div class="container container-account">
 
         <div class="profile-box">
+          {{#if isAuthen}}
           <div class="avatar-box">
-            <img class="account-avatar" src="./img/profile-max.jpg">
+            <img class="account-avatar" src="{{user.img}}">
           </div>
           <div class="user-box">
             <div class="username">
-              Max Mao
+              Hello, {{user.userName}}
             </div>
             <div class="edit-profile">
-              <a href="#">Edit Profile</a>
+              <a href="#">The guy is so lazy that he did not put anything on his page.</a>
             </div>
           </div>
+          {{else}}
+          <div class="avatar-box">
+            <img class="account-avatar" src="./img/anonymous-icon.jpg">
+          </div>
+          <div class="user-box">
+            <div class="username">
+              Hello, you have not logged in.
+            </div>
+          </div>
+          {{/if}}
         </div>
 
         <div class="control-panel">
@@ -96,7 +107,7 @@
           </ul>
           <a href="/account/logout">
             <div class="logout">
-              Log out
+              {{#if isAuthen}}Log out{{else}}Log in{{/if}}
             </div>
           </a>
         </div>
