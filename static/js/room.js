@@ -33,9 +33,14 @@ $(document).ready(function() {
 })
 
 
-
 function initializePage() {
   room = $('#roomName').text();
+
+	// get user
+	var userString = $('#savedLoginInfo').text().toString();
+	if(userString.length>2)
+		user = JSON.parse(userString);
+	// Create socket connection
   socket = io.connect();
   socket.emit("login", {programName: room});
   socket.on("receiveMsg", renderReceivedMessage);
@@ -58,7 +63,8 @@ function sendMessage(e) {
   else{
     var message = {
       "content":content,
-      "program":room
+      "program":room,
+			"user": user
     };
     renderMessage(message);
     socket.emit("sendMsg", message);
@@ -89,10 +95,14 @@ function renderMessage(data){
   var content = data.content;
   var date = new Date();
   var time = date.getHours() + ":" + date.getMinutes();
+	var imageIcon = "/img/anonymous-icon.jpg";
+	if(user){
+		imageIcon = user.img;
+	}
   var addHTML = '<div class="message-block">\
     <div class="msg-content">' + content +
     '</div>\
-    <img id="" class="" src="/img/profile-max.jpg" alt="">\
+    <img id="" class="" src="' + imageIcon + '" alt="">\
     <div class="timestamp" id="">' + time + '\
     </div>\
   </div>';
@@ -108,10 +118,15 @@ function renderReceivedMessage(data){
 	var content = data.content;
   var date = new Date();
   var time = date.getHours() + ":" + date.getMinutes();
+	var receivedUser = data.user;
+	var imageIcon = "/img/anonymous-icon.jpg";
+	if(user){
+		imageIcon = user.img;
+	}
   var addHTML = '<div class="message-inverse">\
     <div class="msg-content">' + content +
     '</div>\
-    <img id="" class="" src="/img/trump.jpeg" alt="">\
+    <img id="" class="" src="' + imageIcon + '"alt="">\
     <div class="timestamp" id="">' + time + '\
     </div>\
   </div>';

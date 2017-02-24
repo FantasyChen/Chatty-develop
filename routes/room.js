@@ -8,6 +8,6 @@ exports.view = function(req, res){
   res.render('room', {
     'name' : programName,
     'isAuthen':req.isAuthenticated(),
-     'user':req.user
+    'user':JSON.stringify(req.user)
   });
 };
