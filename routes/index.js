@@ -17,7 +17,7 @@ exports.favorites = function(req, res) {
   models.Program
 		.find()
 		.exec(function(err, programs){
-      res.render('index', {'programs': programs});
+      res.render('favorites', {'programs': programs});
     });
 }
 exports.account = function(req, res) {

@@ -1,7 +1,12 @@
+var models = require('../model');
+
 exports.view = function(req, res) {
-  var programs = req.db.get('programs');
-  programs['search'] = false;
-  res.render('category', programs);
+  models.Program
+    .find()
+    .exec(function(err, programs){
+      programs['search'] = false;
+      res.render('category', {'programs': programs});
+    });
 }
 
 exports.search = function(req, res){
