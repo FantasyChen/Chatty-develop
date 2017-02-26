@@ -120,8 +120,8 @@ function renderReceivedMessage(data){
   var time = date.getHours() + ":" + date.getMinutes();
 	var receivedUser = data.user;
 	var imageIcon = "/img/anonymous-icon.jpg";
-	if(user){
-		imageIcon = user.img;
+	if(receivedUser){
+		imageIcon = receivedUser.img;
 	}
   var addHTML = '<div class="message-inverse">\
     <div class="msg-content">' + content +
