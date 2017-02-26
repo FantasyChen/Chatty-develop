@@ -20,3 +20,5 @@ var UserSchema = new Mongoose.Schema({
 
 exports.Program = Mongoose.model('Program', ProgramSchema, 'programs');
 exports.User = Mongoose.model('User', UserSchema, 'users');
+exports.UserSchema = UserSchema;
+exports.ProgramSchema = ProgramSchema; 

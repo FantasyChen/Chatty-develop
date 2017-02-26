@@ -40,35 +40,31 @@
       {{#if error}}
       <div class = "errorbox">
         <p>
-          Incorrect username or password.
+          {{errorMsg}}
         </p>
       </div>
       {{/if}}
-    <form id="loginForm" role="form" method="post" action="/account/login/user">
+    <form id="registerForm" role="form" method="post" action="/account/register/user">
       <div class="login-box">
         <div class="username-box">
-          <input type="text" class="username" placeholder="Username" name = "username"/>
+          <input type="text" class="userID" placeholder="Username" name = "userID"/>
+        </div>
+        <div class="username-box">
+          <input type="text" class="nickname" placeholder="Nickname" name = "username"/>
         </div>
         <div class="password-box">
           <input type="password" class="password" placeholder="Password" name = "password"/>
         </div>
-      </div>
-      <div class = "forgetbox">
-        <p>
-          <a href = "#">Forgot username </a> or <a href = '#'>password</a> ?
-        </p>
+        <div class="password-box">
+          <input type="password" class="password" placeholder="Confirm Password" name = "confirm"/>
+        </div>
       </div>
       <div class = "login index-button">
-        <input type = "submit" id = "loginBtn" value = "Login" class = "loginBtn">
-        </input>
-      </div>
-  </form>
-  <form action="/account/register">
-  <div class = "login index-button">
-  <button class = "registerBtn ">
-    Register
-  </button>
-  </div>
+      <button class = "registerBtn">
+        Register
+      </button>
+    </div>
+
   </form>
   <form action = "/">
     <div class = "login index-button">
