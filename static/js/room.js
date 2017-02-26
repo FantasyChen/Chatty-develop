@@ -41,6 +41,7 @@ function initializePage() {
 	if(userString.length>2)
 		user = JSON.parse(userString);
 	// Create socket connection
+	console.log(user);
   socket = io.connect();
   socket.emit("login", {programName: room});
   socket.on("receiveMsg", renderReceivedMessage);
@@ -96,14 +97,18 @@ function renderMessage(data){
   var date = new Date();
   var time = date.getHours() + ":" + date.getMinutes();
 	var imageIcon = "/img/anonymous-icon.jpg";
+	var userName = "Anonymous";
 	if(user){
 		imageIcon = user.img;
+		userName = user.userName;
 	}
   var addHTML = '<div class="message-block">\
     <div class="msg-content">' + content +
     '</div>\
     <img id="" class="" src="' + imageIcon + '" alt="">\
-    <div class="timestamp" id="">' + time + '\
+    <div class="timestamp" id="">' + getCurrentTime() + '\
+    </div>\
+		<div class="username" id="">' + userName + '\
     </div>\
   </div>';
   $('.messages').append(addHTML);
@@ -116,19 +121,21 @@ function renderMessage(data){
 function renderReceivedMessage(data){
 	console.log("received");
 	var content = data.content;
-  var date = new Date();
-  var time = date.getHours() + ":" + date.getMinutes();
 	var receivedUser = data.user;
 	var imageIcon = "/img/anonymous-icon.jpg";
+	var userName = "Anonymous";
 	if(receivedUser){
 		imageIcon = receivedUser.img;
+		userName = receivedUser.userName;
 	}
   var addHTML = '<div class="message-inverse">\
     <div class="msg-content">' + content +
     '</div>\
     <img id="" class="" src="' + imageIcon + '"alt="">\
-    <div class="timestamp" id="">' + time + '\
+    <div class="timestamp" id="">' + getCurrentTime() + '\
     </div>\
+		<div class="username" id="">' + userName + '\
+		</div>\
   </div>';
   $('.messages').append(addHTML);
   updateScrollBar();
@@ -141,4 +148,15 @@ function renderUserJoined(data){
 
 function updateScrollBar() {
   $('html, body').scrollTop( $(document).height() - $(window).height() );
+}
+
+function getCurrentTime(){
+	var date = new Date();
+	var hour = date.getHours().toString(), minute = date.getMinutes().toString();
+	if(hour.length == 1)
+		hour = '0' + hour;
+	if(minute.length == 1)
+		minute = '0' + minute;
+	var time = hour + ":" + minute;
+	return time;
 }
