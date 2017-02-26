@@ -11,11 +11,16 @@ exports.view = function(req, res){
 
 
 exports.favorites = function(req, res) {
+  if(!req.isAuthenticated()){
+    res.render('favorites', {'programs': [], 'isAuthen':false, 'user':null});
+  }
+  else{
   models.Program
 		.find()
 		.exec(function(err, programs){
       res.render('favorites', {'programs': programs, 'isAuthen':req.isAuthenticated(), 'user':req.user});
     });
+  }
 }
 
 exports.account = function(req, res) {

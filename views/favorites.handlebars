@@ -48,7 +48,6 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
     <!-- <div class = "container">
       <div class = "emptyspace">
       </div>
@@ -57,6 +56,8 @@
 
 
       <!-- test for handlebars -->
+      {{#if isAuthen}}
+
       {{#each programs}}
       <div class = "chatty-template">
         <a class="link" href="./room/{{program-name}}">
@@ -89,6 +90,9 @@
         </a>
       </div>
       {{/each}}
+      {{else}}
+        Sorry, you need to login to add or view your favorites.
+      {{/if}}
 
     </div><!-- /.container -->
 
