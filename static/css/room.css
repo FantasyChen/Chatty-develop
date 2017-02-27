@@ -1,9 +1,10 @@
-/**
-* Unicorn Admin Template
-* Diablo9983 -> diablo9983@gmail.com
-**/
 
-
+#roomName {
+  font-family: none;
+}
+.bg-room {
+  padding-top: 4.5rem;
+}
 /* send box*/
 .sendBox {
   min-height: 10px;
@@ -41,7 +42,8 @@
 .message-box button {
   /*border: 0;*/
   /*padding: 0;*/
-  float: right;
+  right:1.5rem;
+  position: absolute;
   width: 10%;
   max-width: 2.5rem;
   margin: auto;
@@ -121,7 +123,6 @@
 .message-inverse {
   margin-bottom: 3rem;
 }
-
 
 /*.messages .message-inverse .msg-content::before {
   content: '';

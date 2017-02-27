@@ -40,6 +40,7 @@ body {
   background-color: #0D1D37;
   box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
+
 .navbar-custom .navbar-brand-custom {
   color: #F8F8F8;
   float: none;
@@ -52,16 +53,27 @@ body {
 .navbar-nav-custom {
   margin: 0 -1.5rem;
 }
+@media (min-width:768px) {
+  .navbar-nav-custom {
+    float: right;
+  }
+}
 /*.navbar-nav-custom li a{
   box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.5);
 }*/
 .navbar-nav-custom li a img {
   height: 1.8rem;
 }
+/*offset bootstrap'c code that float title in large screen*/
+.navbar-room-title {
+    float: none;
+    box-shadow: none;
+}
 .navbar-return {
   padding: 1rem;
   padding-left: 1.2rem;
-  float: left;
+  left: 0;
+  position: absolute;
 }
 .navbar-return img{
   /*display: inline-block;*/
@@ -135,5 +147,9 @@ body {
   /*box-shadow: -2px 3px 5px 0 rgba(0, 0, 0, 0.5);*/
   display: inline-block;
   width: 24%;
-
+}
+@media (min-width: 768px) {
+  .nav li a {
+    width:auto;
+  }
 }
