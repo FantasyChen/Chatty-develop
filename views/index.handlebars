@@ -33,9 +33,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
+  <div id="savedLoginInfo" style="display: none;">
+  {{#if isAuthen}}{{user}}{{/if}}
+  </div>
   <body class="bg-custom">
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header navbar-custom">
@@ -84,7 +85,11 @@
             </div>
             <div class="collect">
               <a href="#">
+                {{#if isAuthen}}
                 <img id="collect" src="./img/star_gold_small.png"/>
+                {{else}}
+                <img id="collect" src="./img/star_grey_small.png"/>
+                {{/if}}
               </a>
             </div>
           </div>

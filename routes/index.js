@@ -9,7 +9,6 @@ exports.view = function(req, res){
     });
 };
 
-
 exports.favorites = function(req, res) {
   if(!req.isAuthenticated()){
     res.render('favorites', {'programs': [], 'isAuthen':false, 'user':null});

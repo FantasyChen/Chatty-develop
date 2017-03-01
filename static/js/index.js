@@ -14,6 +14,7 @@ function changeCollect(e){
   var origImg = $(this).find('img').attr("src");
   if(origImg == "./img/star_gold_small.png"){
     origImg = $(this).find('img').attr("src","./img/star_grey_small.png" );
+		
   }
   else{
     origImg = $(this).find('img').attr("src","./img/star_gold_small.png" );
