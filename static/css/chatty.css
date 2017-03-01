@@ -7,6 +7,10 @@ body {
   background: #101D36; /* For browsers that do not support gradients */
 
 }
+a:hover {
+  text-decoration: none;
+  cursor: auto;
+}
 .bg-custom {
   background: -webkit-linear-gradient(left top, #101D36, #253B67); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, #101D36, #253B67); /* For Opera 11.1 to 12.0 */
@@ -101,7 +105,7 @@ body {
   padding-left: 0.5rem;
   padding-top: 0rem;
 }
-.description .row p {
+.description .row p, .description .row span{
   font-size: 1.3rem;
   color: #F8F8F8;
   text-decoration: none;

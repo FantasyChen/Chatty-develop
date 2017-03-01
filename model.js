@@ -11,6 +11,10 @@ var ProgramSchema = new Mongoose.Schema({
   "viewerNum": String
 });
 
+
+//  for search
+ProgramSchema.index({'$**': 'text'});
+
 var UserSchema = new Mongoose.Schema({
   "userID": String,
   "pwd": String,

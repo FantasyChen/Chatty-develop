@@ -22,7 +22,6 @@ var login = require('./routes/login');
 var room = require('./routes/room');
 var search = require('./routes/search');
 var models = require('./model');
-
 // Create the server instance
 var app = express();
 
@@ -118,6 +117,7 @@ app.get('/favorites',index.favorites);
 app.get('/category', search.view);
 app.get('/category/search', search.search);
 app.get('/account', index.account);
+app.get('/contact',index.contact);
 app.get('/account/login', login.view);
 app.get('/account/logout', login.logout);
 app.get('/account/session', login.session);
