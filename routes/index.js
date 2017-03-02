@@ -29,7 +29,7 @@ exports.favorites = function(req, res) {
 }
 
 exports.account = function(req, res) {
-  res.render('account', {'isAuthen':req.isAuthenticated(), 'user':JSON.stringify(req.user)});
+  res.render('account', {'isAuthen':req.isAuthenticated(), 'user':req.user});
 }
 
 exports.addFavorite = function(req, res) {
