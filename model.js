@@ -8,7 +8,8 @@ var ProgramSchema = new Mongoose.Schema({
   "program-name": String,
   "program-time": String,
   "category": String,
-  "viewerNum": String
+  "viewerNum": String,
+  "favorete": Array
 });
 
 
@@ -19,10 +20,11 @@ var UserSchema = new Mongoose.Schema({
   "userID": String,
   "pwd": String,
   "userName": String,
-  "img": String
+  "img": String,
+  "favorite": Array
 });
 
 exports.Program = Mongoose.model('Program', ProgramSchema, 'programs');
 exports.User = Mongoose.model('User', UserSchema, 'users');
 exports.UserSchema = UserSchema;
-exports.ProgramSchema = ProgramSchema; 
+exports.ProgramSchema = ProgramSchema;

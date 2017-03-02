@@ -29,6 +29,7 @@ a:hover {
 .container-custom {
   padding-left: 0;
   padding-right: 0;
+  color: white;
 }
 .navbar {
   color: #0a1b35;
@@ -156,4 +157,111 @@ a:hover {
   .nav li a {
     width:auto;
   }
+}
+
+
+
+.login .title {
+  width: 100%;
+  text-align: center;
+  color: #F8F8F8;
+  font-size: 9rem;
+  font-family: 'Pacifico',cursive;
+}
+.login-box {
+  margin-top: 2rem;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+.login-box input {
+  border-radius: 2px;
+  /*border-style: none;*/
+  width: 21rem;
+  line-height: 3rem;
+  border: 0.5px solid #C4C4C4;
+  color: black;
+}
+
+
+
+.login .errorbox{
+  text-align: center;
+  color: white;
+}
+
+
+.login .forgetbox{
+  text-align: center;
+  color: white;
+}
+
+
+.login .index-button {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+
+.login input[type=submit].loginBtn{
+  margin: auto;
+  line-height: 3rem;
+  width: 21rem;
+  border: 0px solid #C4C4C4;
+  color: #F8F8F8;
+  background-color: #60b01a;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login .registerBtn{
+  margin: auto;
+  line-height: 3rem;
+  width: 21rem;
+  border: 0px solid #C4C4C4;
+  color: #F8F8F8;
+  border-radius: 2px;
+  background-color: #35b3ce;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.login input[type=submit].guestBtn{
+  margin: auto;
+  line-height: 3rem;
+  width: 21rem;
+  border: 0px solid #C4C4C4;
+  color: #F8F8F8;
+  border-radius: 2px;
+  background-color: #695a5a;
+}
+
+
+.login .backBtn{
+  margin: auto;
+  line-height: 3rem;
+  width: 21rem;
+  border: 0px solid #C4C4C4;
+  color: #F8F8F8;
+  border-radius: 2px;
+  background-color: #695a5a;
+  display: block;
+}
+
+
+
+.popUp{
+  margin: 25px;
+  background-color: #426788;
+  border: 20px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.popText{
+  color: white;
+  text-align: center;
 }

@@ -10,7 +10,7 @@
     <!-- <link rel="icon" href="../../favicon.ico"> -->
 
     <title>Chatiee</title>
-
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
     <!-- Bootstrap core CSS -->
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,7 +19,6 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bahiana|Lobster|Pacifico|Barrio" rel="stylesheet" type="text/css">
-
     <!-- Custom styles for this template -->
     <link href="./css/chatty.css" rel="stylesheet">
 
@@ -33,9 +32,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <div id="savedLoginInfo" style="display: none;">
-  {{#if isAuthen}}{{user}}{{/if}}
-  </div>
+  <div id="savedLoginInfo" style="display: none;">{{#if isAuthen}}{{user}}{{/if}}</div>
   <body class="bg-custom">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -83,8 +80,8 @@
                 <p>Live Viewers: </p> <span id="viewerNum">{{viewerNum}}</span>
               </div>
             </div>
-            <div class="collect">
-              <a href="#">
+            <div class="collect" id = "{{program-name}}">
+              <a href = '#'>
                 {{#if isAuthen}}
                 <img id="collect" src="./img/star_gold_small.png"/>
                 {{else}}
@@ -100,12 +97,50 @@
 
     </div><!-- /.container -->
 
+    <div class = "popUp" id="loginPopUp">
+      <div class = "popText">
+      Please login.
+      </div>
+
+      <form id="loginForm" role="form" method="post" action="/account/login/user">
+        <div class="login-box">
+          <div class="username-box">
+            <input type="text" class="username" placeholder="Username" name = "username"/>
+          </div>
+          <div class="password-box">
+            <input type="password" class="password" placeholder="Password" name = "password"/>
+          </div>
+        </div>
+        <div class = "login index-button">
+          <input type = "submit" id = "loginBtn" value = "Login" class = "loginBtn">
+        </input>
+      </div>
+    </form>
+  <form action="/account/register">
+  <div class = "login index-button">
+  <button class = "registerBtn ">
+    Register
+  </button>
+  </div>
+  </form>
+  <div class = "login index-button">
+  <button class = "backBtn ">
+    Back
+  </button>
+  </div>
+  </div>
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <script>window.jQuery || document.write('<script src="./vendor/jquery.min.js"><\/script>')</script>
+    <!-- Include jQuery Popup Overlay -->
+    <!-- <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script> -->
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src = "/js/index.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

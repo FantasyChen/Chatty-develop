@@ -42,7 +42,8 @@ exports.register = function(req, res){
             'userID': req.body.userID,
             'pwd': req.body.password,
             'userName': req.body.username,
-            'img': "/img/profile-max.jpg"
+            'img': "/img/profile-max.jpg",
+            'favorte': []
           });
           newUser.save(function (errs){
             if(errs)

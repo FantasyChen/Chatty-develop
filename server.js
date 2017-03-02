@@ -126,6 +126,8 @@ app.post('/account/register/user', login.register);
 app.post('/account/login/user', passport.authenticate('local', { failureRedirect: '/account/session'}), function(req, res) {
     res.redirect('/');
   });
+app.get('/addFavorite', index.addFavorite);
+
 
 
 // Start the server
