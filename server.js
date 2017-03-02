@@ -120,8 +120,7 @@ app.get('/account', index.account);
 // for submit contact form
 app.get('/contact',contact.contact);
 app.get('/contact/submit', contact.submit);
-//test
-app.get('/contact/add', contact.addFriend);
+app.get('/help', index.help)
 
 app.get('/account/login', login.view);
 app.get('/account/logout', login.logout);

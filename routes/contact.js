@@ -17,12 +17,12 @@ exports.submit = function(req, res) { 
   fs.readFile('./contact.json', 'utf-8',function(err, data){
     if (err) throw err
     var array = JSON.parse(data);
-    console.log(array);
-    console.log(newContact);
-    console.log(array.contacts);
+    // console.log(array);
+    // console.log(newContact);
+    // console.log(array.contacts);
+    // array.contacts.push(newContact);
     array.contacts.push(newContact);
-    array.contacts.push(newContact);
-    console.log(JSON.stringify(array) + "*********************" + array.contacts);
+    // console.log(JSON.stringify(array) + "*********************" + array.contacts);
     fs.writeFile('./contact.json', JSON.stringify(array),'utf8', function(err) {
       if (err) throw err;
       console.log('done!');
@@ -30,9 +30,10 @@ exports.submit = function(req, res) { 
   });
 
 
-  console.log(newContact);
+  // console.log(newContact);
   // data.contacts.push(newContact);
-  res.redirect('/contact');
+  // res.redirect('/contact');
+  res.render('submit')
   // res.redirect(newContact);
 	// Your code goes here
  }

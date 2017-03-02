@@ -22,13 +22,13 @@ var UserSchema = new Mongoose.Schema({
   "img": String
 });
 
-var contactSchema = new Mongoose.Schema({
-  "email": String,
-  "topic": String,
-  "detail": String
-});
+// var contactSchema = new Mongoose.Schema({
+//   "email": String,
+//   "topic": String,
+//   "detail": String
+// });
 
 exports.Program = Mongoose.model('Program', ProgramSchema, 'programs');
 exports.User = Mongoose.model('User', UserSchema, 'users');
 exports.UserSchema = UserSchema;
-exports.ProgramSchema = ProgramSchema;
+// exports.ProgramSchema = ProgramSchema;
