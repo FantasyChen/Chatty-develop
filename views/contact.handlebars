@@ -12,14 +12,15 @@
     <title>Chatty U :)</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
 
     <!-- Custom styles for this template -->
-    <link href="./css/chatty.css" rel="stylesheet">
-    <link href="./css/account.css" rel="stylesheet" type="text/css">
+    <link href="/css/chatty.css" rel="stylesheet">
+    <link href="/css/account.css" rel="stylesheet" type="text/css">
+
     <link href="https://fonts.googleapis.com/css?family=Bahiana|Lobster|Pacifico|Barrio" rel="stylesheet" type="text/css">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -41,15 +42,56 @@
         </div>
         <div id="navbar">
           <ul class="nav navbar-nav navbar-nav-custom">
-            <li><a href="/"><img src="./img/navbar-icon/home-white-small.png" /></a></li>
-            <li><a href="./category"><img src="./img/navbar-icon/search-small.png" /></a></li>
-            <li><a href="./favorites"><img src="./img/navbar-icon/star-white-small.png" /></a></li>
-            <li class="active"><a href="#"><img src="./img/navbar-icon/profile-white-small.png" /></a></li>
+            <li><a href="/"><img src="/img/navbar-icon/home-white-small.png" /></a></li>
+            <li><a href="/category"><img src="/img/navbar-icon/search-small.png" /></a></li>
+            <li><a href="/favorites"><img src="/img/navbar-icon/star-white-small.png" /></a></li>
+            <li class="active"><a href="#"><img src="/img/navbar-icon/profile-white-small.png" /></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+    <div class="container contact">
+      <h1 class="contact-title">
+        Contact Customer Support
+      </h1>
+      <p>
+        Your feedback is valuable to us.
+      </p>
+      <form action="/contact/submit" method="get" role="form">
+        <ul>
+          <li class="input-list">
+            <label for="contact-email">
+              Your Email Address
+            </label>
+            <input type="email" id="email" name="email" class="contact-input"/>
+          </li>
+          <li class="input-list">
+            <label for="feedback-topic">
+              Feedback Topic
+            </label>
+            <select name="topic" id="topic" class="contact-input" >
+              <option disabled selected value=>Please select a topic</option>
+              <option value="bug">Reporting a bug</option>
+              <option value="program">
+                Cannot find your program
+              </option>
+              <option value="account">
+                Account Issue
+              </option>
+              <option value="other">
+                Other
+              </option>
+            </select>
+          </li>
+          <li class="input-list">
+            <label for="detail">Details</label>
+            <textarea type="text"  class="contact-input" id="detail" name="detail"></textarea>
+          </li>
+          <button type="submit">Submit</button>
+        </ul>
+      </form>
 
+    </div>
     <!-- /.container -->
 
     <!-- Bootstrap core JavaScript

@@ -26,7 +26,3 @@ exports.favorites = function(req, res) {
 exports.account = function(req, res) {
   res.render('account', {'isAuthen':req.isAuthenticated(), 'user':req.user});
 }
-
-exports.contact = function(req, res) {
-  res.render('contact');
-}

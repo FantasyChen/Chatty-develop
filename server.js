@@ -22,6 +22,7 @@ var login = require('./routes/login');
 var room = require('./routes/room');
 var search = require('./routes/search');
 var models = require('./model');
+var contact = require('./routes/contact');
 // Create the server instance
 var app = express();
 
@@ -34,8 +35,6 @@ mongoose.connect(mongoURL);
 
 
 // User authentication
-
-
 // Express and Passport Session
 var session = require('express-session');
 var passport = require('passport')
@@ -117,7 +116,13 @@ app.get('/favorites',index.favorites);
 app.get('/category', search.view);
 app.get('/category/search', search.search);
 app.get('/account', index.account);
-app.get('/contact',index.contact);
+
+// for submit contact form
+app.get('/contact',contact.contact);
+app.get('/contact/submit', contact.submit);
+//test
+app.get('/contact/add', contact.addFriend);
+
 app.get('/account/login', login.view);
 app.get('/account/logout', login.logout);
 app.get('/account/session', login.session);
