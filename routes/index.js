@@ -32,12 +32,6 @@ exports.account = function(req, res) {
   res.render('account', {'isAuthen':req.isAuthenticated(), 'user':JSON.stringify(req.user)});
 }
 
-exports.contact = function(req, res) {
-  res.render('contact');
-}
-
-
-
 exports.addFavorite = function(req, res) {
   models.User
     .findOne({"userID": req.query.userID})

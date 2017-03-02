@@ -88,3 +88,22 @@
 .logout:hover,.logout:active {
   text-decoration: none;
 }
+ul {
+  padding: 0;
+}
+.contact {
+  color: #F8F8F8;
+}
+.input-list {
+  list-style: none;
+}
+.input-list label {
+  display: block;
+}
+.contact-input {
+  width: 100%;
+  color: #0F0F0F;
+}
+#detail {
+  height: 20rem;
+}

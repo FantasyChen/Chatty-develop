@@ -37,6 +37,7 @@
       <div class="title">
         Chatiee
       </div>
+
       {{#if error}}
       <div class = "errorbox">
         <p>
@@ -44,39 +45,41 @@
         </p>
       </div>
       {{/if}}
-    <form id="loginForm" role="form" method="post" action="/account/login/user">
-      <div class="login-box">
-        <div class="username-box">
-          <input type="text" class="username" placeholder="Username" name = "username"/>
+
+      <form id="loginForm" role="form" method="post" action="/account/login/user">
+        <div class="login-box">
+          <div class="username-box">
+            <input type="text" class="username" placeholder="Username" name = "username"/>
+          </div>
+          <div class="password-box">
+            <input type="password" class="password" placeholder="Password" name = "password"/>
+          </div>
         </div>
-        <div class="password-box">
-          <input type="password" class="password" placeholder="Password" name = "password"/>
+        <div class = "forgetbox">
+          <p>
+            <a href = "#">Forgot username </a> or <a href = '#'>password</a> ?
+          </p>
         </div>
-      </div>
-      <div class = "forgetbox">
-        <p>
-          <a href = "#">Forgot username </a> or <a href = '#'>password</a> ?
-        </p>
-      </div>
-      <div class = "login index-button">
-        <input type = "submit" id = "loginBtn" value = "Login" class = "loginBtn">
-        </input>
-      </div>
-  </form>
-  <form action="/account/register">
-  <div class = "login index-button">
-  <button class = "registerBtn ">
-    Register
-  </button>
-  </div>
-  </form>
-  <form action = "/">
-    <div class = "login index-button">
-      <input type = "submit"  value = "Guest" class = "guestBtn">
-      </input>
+        <div class = "login index-button">
+          <input type = "submit" id = "loginBtn" value = "Login" class = "loginBtn">
+          </input>
+        </div>
+      </form>
+
+      <form action="/account/register">
+        <div class = "login index-button">
+          <button class = "registerBtn ">
+            Register
+          </button>
+        </div>
+      </form>
+      <form action = "/">
+        <div class = "login index-button">
+          <input type = "submit"  value = "Guest" class = "guestBtn">
+          </input>
+        </div>
+      </form>
     </div>
-  </form>
-</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
