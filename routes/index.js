@@ -56,3 +56,7 @@ exports.addFavorite = function(req, res) {
       }
     });
 }
+
+exports.help = function(req, res) {
+  res.render('help');
+}
