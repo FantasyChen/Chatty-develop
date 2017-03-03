@@ -1,0 +1,24 @@
+.container-custom .chatty-template .row .description {
+    padding-left: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.program-img-box {
+  width: 100%;
+}
+.program-name, .channel-name {
+  width: 50%
+}
+.description .program-name {
+  margin-bottom: 0;
+}
+.time {
+    width: 83%;
+    display: inline-block;
+}
+#collect {
+    /* float: right; */
+    position: absolute;
+    bottom: 8px;
+    width: 48px;
+}
