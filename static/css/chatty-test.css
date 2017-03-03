@@ -1,3 +1,8 @@
+.chatty-template {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 .container-custom .chatty-template .row .description {
     padding-left: 0.8rem;
     padding-top: 0.5rem;
@@ -5,10 +10,17 @@
     width: 86%;
 }
 .row-test {
-  display: table-cell;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: table-cell;
+    max-width: 48rem;
 }
 .program-img-box {
   width: 100%;
+}
+.program-img {
+  width: 100%;
+  max-width: 48rem;
 }
 .program-name, .channel-name {
   width: 50%
@@ -20,9 +32,13 @@
     width: 83%;
     display: inline-block;
 }
+.collect {
+  display: inline-block;
+}
 #collect {
     /* float: right; */
-    position: absolute;
-    bottom: 8px;
+    position: relative;
+    bottom: 5px;
+    right: 5px;
     width: 48px;
 }
