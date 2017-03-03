@@ -4,6 +4,9 @@
     padding-bottom: 0.5rem;
     width: 86%;
 }
+.row-test {
+  display: table-cell;
+}
 .program-img-box {
   width: 100%;
 }
