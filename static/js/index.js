@@ -31,6 +31,7 @@ function initializePage() {
 
 function changeCollect(e){
   e.preventDefault();
+	ga("send","event",'star','click');
 	if(!isAuthen){
 		$('#loginPopUp').popup('show');
 		return;

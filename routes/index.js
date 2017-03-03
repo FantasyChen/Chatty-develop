@@ -1,14 +1,25 @@
 var models = require('../model');
-
+var data =
 exports.view = function(req, res){
   //console.log(data);
   models.Program
 		.find()
 		.exec(function(err, programs){
-      res.render('index', {'programs': programs, 'isAuthen':req.isAuthenticated(), 'user':JSON.stringify(req.user)});
+      res.render('index', {'programs': programs, 'isAuthen':req.isAuthenticated(),
+      'showAlt': false,
+      'user':JSON.stringify(req.user)});
     });
 };
-
+exports.view2 = function(req, res){
+  //console.log(data);
+  models.Program
+		.find()
+		.exec(function(err, programs){
+      res.render('index', {'programs': programs, 'isAuthen':req.isAuthenticated(),
+      'showAlt': true,
+      'user':JSON.stringify(req.user)});
+    });
+};
 exports.favorites = function(req, res) {
   if(!req.isAuthenticated()){
     res.render('favorites', {'programs': [], 'isAuthen':false, 'user':null});
