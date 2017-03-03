@@ -41,7 +41,7 @@ function initializePage() {
 	if(userString.length>2)
 		user = JSON.parse(userString);
 	// Create socket connection
-	console.log(user);
+	//console.log(user);
   socket = io.connect();
   socket.emit("login", {programName: room});
   socket.on("receiveMsg", renderReceivedMessage);
@@ -119,7 +119,7 @@ function renderMessage(data){
 }
 
 function renderReceivedMessage(data){
-	console.log("received");
+	//console.log("received");
 	var content = data.content;
 	var receivedUser = data.user;
 	var imageIcon = "/img/anonymous-icon.jpg";
