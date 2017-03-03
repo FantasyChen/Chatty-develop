@@ -100,9 +100,22 @@
               <div class = "row program-viewer">
                 <p>Live Viewers: </p> <span id="viewerNum">{{viewerNum}}</span>
               </div>
+              {{#if showAlt}}
+              {{else}}
+              <div class="collect" id = "{{program-name}}">
+                <a href = '#'>
+                  {{#if isAuthen}}
+                  <img id="collect" src="./img/star_gold_small.png"/>
+                  {{else}}
+                  <img id="collect" src="./img/star_grey_small.png"/>
+                  {{/if}}
+                </a>
+              </div>
+              {{/if}}
             </div>
           </div>
         </div>
+        {{#if showAlt}}
         <div class="collect" id = "{{program-name}}">
           <a href = '#'>
             {{#if isAuthen}}
@@ -112,6 +125,7 @@
             {{/if}}
           </a>
         </div>
+        {{/if}}
         </a>
       </div>
       {{/each}}
