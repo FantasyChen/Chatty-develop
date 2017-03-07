@@ -27,7 +27,8 @@
   background: #0D1D37;
 }
 .input-box {
-  width: 100%;
+  /*width: 100%;*/
+  width: 300px;
   padding-right: 4.2rem;
   height: 100%;
   display: block;
