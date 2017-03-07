@@ -28,13 +28,13 @@
 }
 .input-box {
   /*width: 100%;*/
-  width: 300px;
+  width: 30px;
   padding-right: 4.2rem;
   height: 100%;
   display: block;
 }
 .input-box input {
-  width: 100%;
+  width: 10px;
   height: 100%;
   border-radius: 2px;
   border-style: none;
