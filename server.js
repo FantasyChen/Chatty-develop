@@ -110,6 +110,7 @@ app.use(express.static(__dirname + '/static'));
 // index routes
 app.get('/',index.view);
 app.get('/test',index.view2);
+
 // room routes
 app.get('/room/:program', room.view);
 app.get('/favorites',index.favorites);

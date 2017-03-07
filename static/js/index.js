@@ -44,6 +44,7 @@ function changeCollect(e){
 			"program": programID,
 			"type": "remove"
 		});
+		ga("send","event",'add favorite','click');
     origImg = $(this).find('img').attr("src","./img/star_grey_small.png" );
   }
   else{
@@ -52,6 +53,7 @@ function changeCollect(e){
 			"program": programID,
 			"type": "add"
 		});
+		ga("send","event",'remove favorite','click');
     origImg = $(this).find('img').attr("src","./img/star_gold_small.png" );
   }
 }
