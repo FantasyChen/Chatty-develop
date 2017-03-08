@@ -53,8 +53,8 @@ a:hover {
   float: none;
   display: inline-block;
   font-size: 3rem;
-  /*font-family: 'Pacifico',cursive;*/
-  font-family: Roboto,arial,sans-serif;
+  font-family: 'Pacifico',cursive;
+  /*font-family: Roboto,arial,sans-serif;*/
   /*temporary solution for centering the title*/
   /*margin-left: -26px;*/
 }
@@ -86,6 +86,9 @@ a:hover {
 .navbar-return img{
   /*display: inline-block;*/
   height: 3rem;
+}
+.font-pacifico {
+  font-family: 'Pacifico',cursive;
 }
 .chatty-template {
   /*padding: 2rem 15px;*/
@@ -172,7 +175,7 @@ a:hover {
   font-family: 'Pacifico',cursive;
 }
 .login-box {
-  margin-top: 2rem;
+  /*margin-top: 2rem;*/
   text-align: center;
   border-radius: 2px;
   margin-bottom: 2rem;

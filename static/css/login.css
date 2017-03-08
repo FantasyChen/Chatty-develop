@@ -1,16 +1,16 @@
 .login .title {
-  width: 100%;
+  /*width: 100%;*/
   text-align: center;
   color: #F8F8F8;
-  font-size: 9rem;
+  height: 14rem;
   font-family: 'Pacifico',cursive;
 }
-.login-box {
+/*.login-box {
   margin-top: 2rem;
   text-align: center;
   border-radius: 2px;
   margin-bottom: 2rem;
-}
+}*/
 .login-box input {
   border-radius: 2px;
   /*border-style: none;*/

@@ -24,6 +24,7 @@
 }
 .room-detail {
   text-align: -webkit-center;
+  font-family: Roboto,arial,sans-serif;
 }
 /* send box*/
 .sendBox {
