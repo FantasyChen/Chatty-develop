@@ -4,7 +4,9 @@ html {
 }
 body {
   padding-top: 10.5rem;
-  background: #101D36; /* For browsers that do not support gradients */
+  background: #101D36;
+  /*font-family: Roboto,arial,sans-serif;*/
+   /* For browsers that do not support gradients */
 
 }
 a:hover {
@@ -51,7 +53,8 @@ a:hover {
   float: none;
   display: inline-block;
   font-size: 3rem;
-  font-family: 'Pacifico',cursive;
+  /*font-family: 'Pacifico',cursive;*/
+  font-family: Roboto,arial,sans-serif;
   /*temporary solution for centering the title*/
   /*margin-left: -26px;*/
 }
