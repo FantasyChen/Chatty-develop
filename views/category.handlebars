@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
@@ -46,25 +46,20 @@
             <li><a href="/favorites"><img src="/img/navbar-icon/star-white-small.png" /></a></li>
             <li><a href="/account"><img src="/img/navbar-icon/profile-white-small.png" /></a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
+        <form id="searchForm" role="form" method="get" class="message-box" action="/category/search">
+          <div class="input-box">
+            <button type = "Search" id = "searchBtn" value = "Search" class = "searchBtn">Search</button>
+            <input type="text" class="searchString" placeholder="Search" name = "searchString"/>
+
+
+            </input>
+          </div>
+        </form>
       </div>
     </nav>
 
     <div class="category-container">
-
-      <!-- search test -->
-      <form id="searchForm" role="form" method="get" action="/category/search">
-      <diva>
-        <div>
-          <input type="text" class="searchString" placeholder="Search" name = "searchString"/>
-        </div>
-      </div>
-      <div>
-        <input type = "submit" id = "searchBtn" value = "Search" class = "searchBtn">
-        </input>
-      </div>
-    </form>
-
     {{#if search}}
       {{#each programs}}
         <div class = "chatty-template">
