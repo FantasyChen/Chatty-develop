@@ -1,10 +1,28 @@
 
 #roomName {
   font-family: none;
+  font-size: 25px;
 }
 .bg-room {
   padding-top: 4.5rem;
 }
+.navbar-title {
+  padding: 8px 8px;
+}
+#program-time {
+  font-size: 9px;
+  display: table-cell;
+  word-spacing: 0.2px;
+  padding-right: 5px;
+}
+#viewerNum {
+  display: table-cell;
+  font-size: 9px;
+}
+#viewer-icon{
+    height: 9px;
+}
+
 /* send box*/
 .sendBox {
   min-height: 10px;
