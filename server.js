@@ -158,7 +158,9 @@ function(socket){
     socket.join(room, function(){
       var userCount = io.sockets.adapter.rooms[room].length;
       console.log(userCount);
-      socket.to(room).emit("userJoined", userCount);
+      io.sockets.to(room).emit("userJoined", userCount);
     });
   });
 });
+
+// app.set('socketio', io);

@@ -1,7 +1,6 @@
 var models = require('../model');
-var data =
+
 exports.view = function(req, res){
-  //console.log(data);
   models.Program
 		.find()
 		.exec(function(err, programs){

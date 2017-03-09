@@ -43,15 +43,15 @@ function initializePage() {
 	// Create socket connection
 	//console.log(user);
   socket = io.connect();
-  socket.emit("login", {programName: room});
+	socket.on("userJoined", renderUserJoined);
   socket.on("receiveMsg", renderReceivedMessage);
-  socket.on("userJoined", renderUserJoined);
   $('.message-submit').click(sendMessage);
   $('input[type="text"].message-input').keydown(function(e){
     if (e.keyCode == 13){
       sendMessage(e);
     }
   });
+	socket.emit("login", {programName: room});
 }
 
 function sendMessage(e) {
@@ -143,6 +143,7 @@ function renderReceivedMessage(data){
 
 function renderUserJoined(data){
   console.log("current number of connected users:" + data);
+	$('#viewerNum #Text').text(data.toString());
 }
 
 
