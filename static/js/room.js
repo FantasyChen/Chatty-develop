@@ -7,6 +7,7 @@ var user = null;
 
 var i = 0;
 var Fake = [
+	'The program is so interesting:)',
   'Hi there, I\'m Trump and you?',
   'Nice to meet you.',
   'How are you?',
@@ -52,6 +53,7 @@ function initializePage() {
     }
   });
 	socket.emit("login", {programName: room});
+	fakeMessage();
 }
 
 function sendMessage(e) {
