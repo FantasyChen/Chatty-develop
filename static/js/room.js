@@ -5,24 +5,24 @@ var socket;
 var room = "";
 var user = null;
 
-// var i = 0;
-// var Fake = [
-//   'Hi there, I\'m Trump and you?',
-//   'Nice to meet you',
-//   'How are you?',
-//   'Not too bad, thanks',
-//   'What do you do?',
-//   'That\'s awesome',
-//   'Codepen is a nice place to stay',
-//   'I think you\'re a nice person',
-//   'Why do you think that?',
-//   'Can you explain?',
-//   'Anyway I\'ve gotta go now',
-//   'It was a pleasure chat with you',
-//   'Time to make a new codepen',
-//   'Bye',
-//   ':)'
-// ];
+var i = 0;
+var Fake = [
+  'Hi there, I\'m Trump and you?',
+  'Nice to meet you',
+  'How are you?',
+  'Not too bad, thanks',
+  'What do you do?',
+  'That\'s awesome',
+  'Codepen is a nice place to stay',
+  'I think you\'re a nice person',
+  'Why do you think that?',
+  'Can you explain?',
+  'Anyway I\'ve gotta go now',
+  'It was a pleasure chat with you',
+  'Time to make a new codepen',
+  'Bye',
+  ':)'
+];
 
 
 $(document).ready(function() {
@@ -114,7 +114,7 @@ function renderMessage(data){
   $('.messages').append(addHTML);
   updateScrollBar();
 	setTimeout(function() {
-	// fakeMessage();
+	fakeMessage();
 	}, 1000 + (Math.random() * 20) * 100);
 }
 
