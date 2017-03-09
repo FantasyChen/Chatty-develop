@@ -90,6 +90,16 @@ function fakeMessage(){
     <div class="timestamp" id="">' + time + '\
     </div>\
   </div>';
+
+	var addHTML = '<div class="message-inverse">\
+    <div class="msg-content">' + content +
+    '</div>\
+    <img id="" class="" src="/img/trump.jpeg" alt="">\
+    <div class="timestamp" id="">' + getCurrentTime() + '\
+    </div>\
+		<div class="username" id="">   Trump \
+		</div>\
+  </div>';
   $('.messages').append(addHTML);
   updateScrollBar();
 }
