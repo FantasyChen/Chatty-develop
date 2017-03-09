@@ -8,18 +8,18 @@ var user = null;
 var i = 0;
 var Fake = [
   'Hi there, I\'m Trump and you?',
-  'Nice to meet you',
+  'Nice to meet you.',
   'How are you?',
   'Not too bad, thanks',
   'What do you do?',
   'That\'s awesome',
-  'Codepen is a nice place to stay',
+  'I think all the students should have one day off today.',
   'I think you\'re a nice person',
   'Why do you think that?',
   'Can you explain?',
   'Anyway I\'ve gotta go now',
-  'It was a pleasure chat with you',
-  'Time to make a new codepen',
+  'It was a pleasure chat with you.',
+  'Hope to see you later.',
   'Bye',
   ':)'
 ];
