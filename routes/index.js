@@ -1,17 +1,17 @@
 var models = require('../model');
 
 exports.view = function(req, res){
-  // models.Program
-	// 	.find()
-	// 	.exec(function(err, programs){
-  //     res.render('index', {'programs': programs, 'isAuthen':req.isAuthenticated(),
-  //     'showAlt': false,
-  //     'user':JSON.stringify(req.user)});
-  //   });
-  res.redirect("/test");
+  models.Program
+		.find()
+		.exec(function(err, programs){
+      res.render('index', {'programs': programs, 'isAuthen':req.isAuthenticated(),
+      'showAlt': false,
+      'user':JSON.stringify(req.user)});
+    });
 };
 exports.view2 = function(req, res){
   //console.log(data);
+  var io = req.app.get('socketio');
   models.Program
 		.find()
 		.exec(function(err, programs){

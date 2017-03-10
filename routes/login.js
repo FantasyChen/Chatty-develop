@@ -58,7 +58,7 @@ exports.register = function(req, res){
               return errs;
             console.log("The new user has been saved.");
             req.login(newUser, function(e){
-              res.redirect('/test');
+              res.redirect('/');
             });
           })
         }
