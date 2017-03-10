@@ -97,12 +97,6 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/static'));
 
 
-/// catch 404 and forwarding to error handler
-// app.use(function(req, res, next) {
-//     var err = new Error('Not Found');
-//     err.status = 404;
-//     next(err);
-// });
 
 
 // add routes here
@@ -110,6 +104,7 @@ app.use(express.static(__dirname + '/static'));
 // index routes
 app.get('/',index.view);
 app.get('/test',index.view2);
+
 
 // room routes
 app.get('/room/:program', room.view);
