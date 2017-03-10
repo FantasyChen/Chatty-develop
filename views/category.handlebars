@@ -61,38 +61,42 @@
 
     <div class="category-container">
     {{#if search}}
-      {{#each programs}}
-        <div class = "chatty-template">
-          <a class="link" href="/room/{{program-name}}">
-          <div class="row">
-            <div class = "col-xs-6">
-              <img class="program-img" src="{{imgURL}}" />
-            </div>
-            <div class = "description col-xs-6">
-              <div class = "row channel-name">
-                <p>{{channel-name}}</p><span> - </span>
+      {{# if result}}
+        {{#each programs}}
+          <div class = "chatty-template">
+            <a class="link" href="/room/{{program-name}}">
+            <div class="row">
+              <div class = "col-xs-6">
+                <img class="program-img" src="{{imgURL}}" />
               </div>
-              <div class = "row program-name">
-                <p>{{program-name}}</p>
-              </div>
-              <div class="time">
-                <div class = "row program-time">
-                  <p>{{program-time}}</p>
+              <div class = "description col-xs-6">
+                <div class = "row channel-name">
+                  <p>{{channel-name}}</p><span> - </span>
                 </div>
-                <div class = "row program-viewer">
-                  <p>Live Viewers: </p> <span id="viewerNum">{{viewerNum}}</span>
+                <div class = "row program-name">
+                  <p>{{program-name}}</p>
                 </div>
+                <div class="time">
+                  <div class = "row program-time">
+                    <p>{{program-time}}</p>
+                  </div>
+                  <div class = "row program-viewer">
+                    <p>Live Viewers: </p> <span id="viewerNum">{{viewerNum}}</span>
+                  </div>
+                </div>
+                <!-- <div class="collect">
+                  <a href="#">
+                    <img id="collect" src="/img/star_gold_small.png"/>
+                  </a>
+                </div> -->
               </div>
-              <!-- <div class="collect">
-                <a href="#">
-                  <img id="collect" src="/img/star_gold_small.png"/>
-                </a>
-              </div> -->
             </div>
+            </a>
           </div>
-          </a>
-        </div>
-        {{/each}}
+          {{/each}}
+        {{else}}
+          <div class="popText" >There is no program related to the key search word. Try again!</div>
+        {{/if}}
       {{else}}
         <div class="category most-popular">
           <p>
