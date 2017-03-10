@@ -1,13 +1,14 @@
 var models = require('../model');
 
 exports.view = function(req, res){
-  models.Program
-		.find()
-		.exec(function(err, programs){
-      res.render('index', {'programs': programs, 'isAuthen':req.isAuthenticated(),
-      'showAlt': false,
-      'user':JSON.stringify(req.user)});
-    });
+  // models.Program
+	// 	.find()
+	// 	.exec(function(err, programs){
+  //     res.render('index', {'programs': programs, 'isAuthen':req.isAuthenticated(),
+  //     'showAlt': false,
+  //     'user':JSON.stringify(req.user)});
+  //   });
+  res.redirect("/test");
 };
 exports.view2 = function(req, res){
   //console.log(data);
