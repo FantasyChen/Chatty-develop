@@ -68,7 +68,24 @@
 .control-list {
   box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
-.control-list a li, .logout , .login{
+.control-list a{
+  color:white;
+}
+
+
+.control-list li, .logout , .login{
+  background-color: rgba(216,216,216,0.4);
+  text-decoration: none;
+  color: #F8F8F8;
+  line-height: 45px;
+  font-size: 16px;
+  margin-bottom: 1px;
+  border-radius: 1px;
+}
+
+
+
+.control-list button, .logout , .login{
   background-color: rgba(216,216,216,0.4);
   text-decoration: none;
   color: #F8F8F8;
@@ -106,4 +123,55 @@ ul {
 }
 #detail {
   height: 20rem;
+}
+
+.settings-list li{
+  background-color: #41444a;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.btn-file input[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+
+
+#img-upload{
+    width: 100%;
+}
+
+.settingform{
+  color:white;
+  background-color: #41444a;
 }

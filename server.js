@@ -84,7 +84,7 @@ app.use(passport.session());
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.logger());
 app.use(express.compress());
-app.use(express.bodyParser());
+app.use(express.bodyParser({uploadDir:'./static/img/upload'}));
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 app.engine('handlebars',handlebars());
@@ -130,10 +130,11 @@ app.get('/account/session', login.session);
 app.get('/account/register', login.registerView);
 app.post('/account/register/user', login.register);
 app.post('/account/login/user', passport.authenticate('local', { failureRedirect: '/account/session'}), function(req, res) {
-    res.redirect('/');
+    res.redirect('/test');
   });
 app.get('/addFavorite', index.addFavorite);
-
+app.post('/account/changeIcon', login.changeIcon);
+app.post('/account/changeNickName', login.changeNickName);
 
 
 // Start the server

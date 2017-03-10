@@ -84,11 +84,53 @@
                 <span class="control-icon"><img src="/img/history-icon-small.png" /></span>History
               </li>
             </a> -->
-            <!-- <a href="#">
-              <li>
-                <span class="control-icon"><img src="/img/setting-icon-small.png" /></span>Setting
+            {{#if isAuthen}}
+              <li><a href = "#settings" data-toggle="collapse"><span class="control-icon"><img src="/img/setting-icon-small.png" /></span>Settings</a>
               </li>
-            </a> -->
+              <div id="settings" class="collapse">
+              <ul class = "control-list settings-list">
+                <a href="#iconform" data-toggle = "collapse">
+                  <li>
+                    <span class="control-icon"><img src="/img/setting-icon-small.png" height ="10px" /></span>Change Avatar Icon
+                  </li>
+                </a>
+                <div id="iconform" class="collapse settingform">
+                  <form method="post" action="/account/changeIcon" enctype = "multipart/form-data">
+                    <div class="input-group">
+                      <input type="text" class="form-control" readonly>
+                      <span class="input-group-btn">
+                        <span class="btn btn-default btn-file">
+                          Browse <input type="file" name ="iconImage" accept = "image/*">
+                        </span>
+                      </span>
+                      <span class="input-group-btn">
+                        <span class="btn btn-default btn-file">Submit <input type="submit">
+                        </span>
+                      </span>
+                    </div>
+                    <img id='img-upload'/>
+                  </form>
+                </div>
+                <a href="#nickform" data-toggle = "collapse">
+                  <li>
+                    <span class="control-icon"><img src="/img/setting-icon-small.png" height ="10px" /></span>Change Nickname
+                  </li>
+                </a>
+                <div id="nickform" class="collapse settingform">
+                  <form method="post" action="/account/changeNickName" >
+                    <div class="input-group">
+                      <input type="text" class="form-control" name = "username">
+                      <span class="input-group-btn">
+                        <span class="btn btn-default btn-file">Submit <input type="submit">
+                        </span>
+                      </span>
+                    </div>
+                    <img id='img-upload'/>
+                  </form>
+                </div>
+              </ul>
+              </div>
+            {{/if}}
             <a href="/contact">
               <li>
                 <span class="control-icon"><img src="/img/feedback-icon-small.png" /></span>Contact Us
@@ -138,5 +180,6 @@
       ga('send', 'pageview');
 
     </script>
+    <script src="/js/account.js"></script>
   </body>
 </html>
