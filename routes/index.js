@@ -9,6 +9,7 @@ exports.view = function(req, res){
       'user':JSON.stringify(req.user)});
     });
 };
+
 exports.view2 = function(req, res){
   //console.log(data);
   var io = req.app.get('socketio');

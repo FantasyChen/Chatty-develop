@@ -80,6 +80,9 @@ function sendMessage(e) {
 function fakeMessage(){
 	console.log("faked");
 	var content = Fake[i];
+	if(i > 3){
+		return;
+	}
 	i ++;
   var date = new Date();
   var time = date.getHours() + ":" + date.getMinutes();
