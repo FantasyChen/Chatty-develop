@@ -168,16 +168,16 @@
   position: relative;
 }
 .messages .message-inverse .msg-content{
-  background: #efefa9;
+  background: #1F5F8B;
   border-radius: 5px;
   border-bottom-left-radius: 0;
-  border: 1px solid #777;
+  /*border: 1px solid #777;*/
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5);
   display: block;
   margin-left: 40px;
   padding: 7px;
   position: initial;
-  color: #733939;
+  color: #F8F8F8;
 }
 
 .messages .message-inverse  .timestamp {
