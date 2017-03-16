@@ -87,7 +87,8 @@
   padding-bottom: 47px;
 }
 .message-block {
-  margin-bottom: 3rem;
+  /*margin-bottom: 3rem;*/
+  float: right;
 }
 /*.messages .message-block .msg-content::before {
   content: '';
@@ -119,14 +120,19 @@
   display: block;
   margin-right: 40px;
   padding: 7px;
-  position: initial;
+  position: relative;
+  right: 34px;
   color: #F5F5F5;
+  max-width: 200px;
 }
 
 .messages .message-block .timestamp {
   margin-top: 5px;
-  margin-right: 2px;
-  float: left;
+  /* margin-right: 8px; */
+  position: relative;
+  display: inline-block;
+  /* float: left; */
+  right: 30px;
   font-size: 1.1rem;
   color: white;
 
@@ -134,7 +140,7 @@
 
 .messages .message-block .username{
   margin-top: 2px;
-  margin-right: 12px;
+  margin-right: 6px;
   float: right;
   font-size: 1.1rem;
   color: #bbb2b2;
@@ -143,7 +149,8 @@
 
 
 .message-inverse {
-  margin-bottom: 3rem;
+  /*margin-bottom: 3rem;*/
+  float: left;
 }
 
 /*.messages .message-inverse .msg-content::before {
@@ -168,16 +175,17 @@
   position: relative;
 }
 .messages .message-inverse .msg-content{
-  background: #efefa9;
+  background: #1F5F8B;
   border-radius: 5px;
   border-bottom-left-radius: 0;
-  border: 1px solid #777;
+  /*border: 1px solid #777;*/
   box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.5);
   display: block;
   margin-left: 40px;
   padding: 7px;
   position: initial;
-  color: #733939;
+  color: #F8F8F8;
+  max-width: 200px;
 }
 
 .messages .message-inverse  .timestamp {
@@ -192,7 +200,7 @@
 
 .messages .message-inverse  .username {
   margin-top: 2px;
-  margin-right: 12px;
+  margin-left: 12px;
   float: left;
   font-size: 1.1rem;
   color: #bbb2b2;
