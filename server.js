@@ -102,7 +102,7 @@ app.use(express.static(__dirname + '/static'));
 // add routes here
 
 // index routes
-app.get('/',index.view);
+app.get('/',index.view2);
 app.get('/test',index.view2);
 
 
