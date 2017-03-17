@@ -102,8 +102,8 @@ app.use(express.static(__dirname + '/static'));
 // add routes here
 
 // index routes
-app.get('/',index.view2);
-app.get('/test',index.view2);
+app.get('/',login.view);
+app.get('/index',index.view2);
 
 
 // room routes
@@ -125,7 +125,7 @@ app.get('/account/session', login.session);
 app.get('/account/register', login.registerView);
 app.post('/account/register/user', login.register);
 app.post('/account/login/user', passport.authenticate('local', { failureRedirect: '/account/session'}), function(req, res) {
-    res.redirect('/');
+    res.redirect('/index');
   });
 app.get('/addFavorite', index.addFavorite);
 app.post('/account/changeIcon', login.changeIcon);
