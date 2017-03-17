@@ -12,6 +12,7 @@ body {
 a:hover {
   text-decoration: none;
   cursor: auto;
+  background:
 }
 .bg-custom {
   background: -webkit-linear-gradient(left top, #101D36, #253B67); /* For Safari 5.1 to 6.0 */
