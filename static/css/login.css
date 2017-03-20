@@ -45,6 +45,7 @@
   color: #F8F8F8;
   background-color: #60b01a;
   border-radius: 2px;
+  height: 35px;
 }
 
 .login .registerBtn{
@@ -55,6 +56,7 @@
   color: #F8F8F8;
   border-radius: 2px;
   background-color: #35b3ce;
+  height: 35px;
 }
 
 .login input[type=submit].guestBtn{
@@ -65,4 +67,5 @@
   color: #F8F8F8;
   border-radius: 2px;
   background-color: #695a5a;
+  height: 35px;
 }
