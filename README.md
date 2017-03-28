@@ -1,5 +1,5 @@
 # Chatty-develop
 
-Web application development. 
+Fancy chat web application development based on Node.js & Bootstrap. 
 
-See [Develop plan](https://docs.google.com/spreadsheets/d/11rUgAQQfz1jnx0vEH-OpOYVAhUUVJ42v91mHcu2eXOc/edit).
+See the release version here. [Chatiee.com](http://chatiee.com)
